@@ -1,0 +1,84 @@
+// font-family: din-2014, sans-serif;
+// font-style: normal;
+// font-weight: 200;
+.bg__bg0 {
+    position: absolute;
+    z-index: -4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8000px;
+    background: #6D4739;
+}
+
+.bg__bg {
+    position: fixed;
+    filter: blur(50px);
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+    background: url(/images/mv.jpg) center no-repeat;
+}
+
+.bg__bg2 {
+    position: absolute;
+    z-index: -2;
+    height: 8000px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: saturation;
+    background-color: #433B84;
+    isolation: isolate;
+    // background-image: url(/images/saido.png);
+}
+
+.bg__bg3 {
+    position: absolute;
+    z-index: -1;
+    height: 8000px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    isolation: isolate;
+    background-image: url(/images/sai__grad.png);
+}
+
+.mv {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 5px;
+    &__catch {
+        position: relative;
+        z-index: -1;
+        padding-top: 22%;
+        text-align: center;
+        font-size: 100px;
+        margin: 0 auto;
+        font-family: din-2014, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        mix-blend-mode: difference;
+        color: #ffffff;
+    }
+    &__txt {
+        position: relative;
+        z-index: -1;
+        font-size: 50px;
+        text-align: center;
+        margin: 0 auto;
+        font-family: din-2014, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        mix-blend-mode: difference;
+        color: #ffffff;
+    }
+}
+
+.test {
+    height: 100vh;
+}
