@@ -6,3 +6,16 @@
     transition: .5s;
     transform: translateY($translate);
 }
+
+@mixin font__base{
+    font-family: din-2014, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @mixin position__base($height:100%){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: ($height);
+  }
