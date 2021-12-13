@@ -99,7 +99,7 @@
 main::before {
     will-change: auto;
     animation: grain 12s steps(8) infinite;
-    background-image: url(/images/noise.png);
+    background-image: url(./../images/noise.png);
     content: '';
     height: 300%;
     left: -50%;
