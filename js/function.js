@@ -7,9 +7,5 @@ $(function(){
     $('#btn__bottom').toggleClass('rotate-bottom')
   $('#gnav').slideToggle();
   })
-  
-  
-  
-  
+})
   // --------------
-  });
