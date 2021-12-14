@@ -13,19 +13,22 @@
         transform: translate(-50%, -50%);
     }
     &__link {
+        @include font__base;
+        text-transform:uppercase;
         display: block;
         padding: 20px;
-        color: #fff;
+        color: rgb(180, 179, 208);
         font-size: 30px;
         text-align: center;
         text-decoration: none;
+        mix-blend-mode: difference;
     }
 }
 
 .btn {
     width: 20px;
     height: 20px;
-    right: 50px;
+    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
