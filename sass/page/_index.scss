@@ -185,7 +185,7 @@
 
     &__submit {
         -webkit-appearance: none;
-        opacity: 0.9;
+        opacity: 0.8;
         width: 100%;
         padding: 0 100px 0 100px;
         background: rgb(29, 29, 29);
@@ -206,7 +206,7 @@
 main::before {
     will-change: auto;
     animation: grain 12s steps(8) infinite;
-    background-image: url(./../images/noise_BIG.png);
+    background-image: url(./../images/noise_BIG2.png);
     content: '';
     height: 300%;
     left: -50%;

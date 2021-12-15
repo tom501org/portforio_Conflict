@@ -1,21 +1,27 @@
 @mixin btn($translate:0) {
-    width: 100%;
-    height: 2px;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    transition: .5s;
-    transform: translateY($translate);
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  transition: .5s;
+  transform: translateY($translate);
 }
 
-@mixin font__base{
-    font-family: din-2014, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+@mixin font__base {
+  font-family: din-2014, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
-  @mixin position__base($height:100%){
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: ($height);
-  }
+@mixin font__futura {
+  font-family: futura-pt, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin position__base($height:100%) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: ($height);
+}
