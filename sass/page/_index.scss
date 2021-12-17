@@ -77,24 +77,42 @@ html {
     height: 200vh;
     z-index: -7;
     width: 100%;
-    margin-bottom: 500px;
+    margin-bottom: 300px;
     mix-blend-mode:difference;
     color: #e5eed6;
+    @media screen and (min-width: 768px) {
+        height: 200vh;
+        margin-bottom: 500px;
+    }
 
+    @media screen and (min-width: 1024px) {
+        height: 200vh;
+        margin-bottom: 530px;
+    }
 
 &__ttl{
     position: sticky;
     top: 0;
     left: 0;
-    height: 40vh;
+    height: 10vh;
     margin-bottom: 300px;
+    @media screen and (min-width: 768px) {
+        height: 40vh;
+        margin-bottom: 300px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 40vh;
+        margin-bottom: 300px;
+    }
 }
 &__ttl--catch {
     
-        padding-top: 50%;
+        padding-top: 70%;
         text-align: center;
-        font-size: 80px;
+        font-size: 40px;
         margin: 0 auto;
+        overflow: hidden;
 
 
         @media screen and (min-width: 768px) {
@@ -109,7 +127,7 @@ html {
     }
 
     &__ttl--txt {
-        font-size: 50px;
+        font-size: 20px;
         text-align: center;
         margin: 0 auto;
 
