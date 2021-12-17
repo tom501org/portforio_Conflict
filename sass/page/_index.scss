@@ -1,6 +1,9 @@
-// font-family: din-2014, sans-serif;
-// font-style: normal;
-// font-weight: 200;
+html{
+    @include font__base;
+}
+
+
+
 .bg__bg0 {
     @include position__base;
     height: (8000px);
@@ -9,7 +12,7 @@
     background: #6D4739;
 }
 
-.bg__bg {
+.bg__bg1 {
     @include position__base;
     position: fixed;
     filter: blur(50px);
@@ -43,7 +46,6 @@
 
 
 .mv {
-    @include font__base;
     position: relative;
     z-index: -1;
     width: 100%;
@@ -103,7 +105,6 @@
 
 
 .contact__ttl {
-    @include font__base;
     position: relative;
     z-index: 1;
     font-size: 50px;
@@ -145,7 +146,6 @@
 
     &__label {
         mix-blend-mode: difference;
-        @include font__base;
         max-width: 500px;
         width: 100%;
         display: block;
@@ -261,8 +261,3 @@ main::before {
     }
 }
 
-
-// @keyframes scrollAnime{
-//     0% { transform: translateX(0)}
-//   100% { transform: translateX(-100%)}
-// }
