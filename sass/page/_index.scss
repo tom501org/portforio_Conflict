@@ -227,10 +227,17 @@ main::before {
     height: 300%;
     left: -50%;
     position: fixed;
-    opacity:0.8 ;
+    opacity:0 ;
     top: -100%;
     width: 300%;
     z-index: -1;
+    @media screen and (min-width: 768px) {
+        opacity:0.8 ; 
+      }
+  
+      @media screen and (min-width: 1024px) {
+        opacity:0.8 ;
+      }
 }
 
 @keyframes grain {
