@@ -87,6 +87,7 @@ html {
     top: 0;
     left: 0;
     height: 40vh;
+    margin-bottom: 300px;
 }
 &__ttl--catch {
     
@@ -126,10 +127,13 @@ html {
 
 
 .test {
-filter: blur(4px);
-opacity: 0.8;
+// filter: blur(2px);
+mix-blend-mode:overlay;
+color:#8279b6;
+opacity: 0.4;
+margin-bottom: 100px;
     height: 100vh;
-    background: rgba(169, 176, 177, 0.507);
+    background: rgb(8, 255, 41);
 }
 
 .test2 {

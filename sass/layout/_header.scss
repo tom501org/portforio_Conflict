@@ -5,7 +5,6 @@
     margin: 0 auto;
     padding: 15px 0;
     mix-blend-mode: difference;
-    color:rgb(209, 16, 16);
     &__wrap {
         display: flex;
         justify-content: space-between;
@@ -14,6 +13,6 @@
     &__ttl {
         padding-left: 15px;
         font-size: 20px;
-        color: rgb(255, 255, 255);
+        color: rgb(115, 119, 119);
     }
 }
