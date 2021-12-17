@@ -13,17 +13,18 @@
     <link rel="stylesheet" href="https://use.typekit.net/rmq1suw.css">
 
 </head>
-<span class="bg__bg0" ></span>
-<span class="bg__bg1" ></span>
-<span class="bg__bg2" ></span>
-<span class="bg__bg3" ></span>
-<span class="bg__bg4" ></span>
+<span class="bg__bg0"></span>
+<span class="bg__bg1"></span>
+<span class="bg__bg2"></span>
+<span class="bg__bg3"></span>
+<span class="bg__bg4"></span>
+<span class="bg__bg5"></span>
 
 
 <body>
 
-        <div class="cursor"></div>
-        <div class="follower"></div>
+    <div class="cursor"></div>
+    <div class="follower"></div>
 
 
     <div class="wrapper">
@@ -48,16 +49,24 @@
             </div>
         </header>
         <!-- 12/13金曜日 -->
-
-        <main class="main">
-            <div class="mv">
-                <p class="mv__catch">KOICHI TOMIYAMA</p>
-                <p class="mv__txt">DESGIN ART CULTURE</p>
+        <div class="mv">
+            <div class="mv__ttl">
+                <p class="mv__ttl--catch">KOUICHI<br>TOMIYAMA</p>
+                <p class="mv__ttl--txt">DESGIN ART CULTURE</p>
             </div>
+        </div>
+        <main class="main">
 
 
 
-            <div class="test">aaaaaaaaaaa</div>
+
+            <div class="test">
+                <div class="mv__ttl">
+                    <p class="mv__ttl--catch">KOUICHI<br>TOMIYAMA</p>
+                    <p class="mv__ttl--txt">DESGIN ART CULTURE</p>
+                </div>
+            </div>
+            
             <div class="test">aaaakaaaaaaaaa</div>
             <div class="test">aaaaaaaaaaaaa</div>
             <div class="test">aaaaaaaaaaaa</div>
@@ -68,33 +77,38 @@
                 <section class="contact">
                     <h2 class="contact__ttl">CONTACT</h2>
 
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse" id="form" class="form" method="post"  target="hidden_iframe" onsubmit="submitted=true;">
+                    <form
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse"
+                        id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
                         <div class="form__name">
-                          <label for="name" class="form__label">NAME</label>
-                          <input id="name" type="text" name="entry.212036592"class="form__input" placeholder="マキタ モトキ" required >
+                            <label for="name" class="form__label">NAME</label>
+                            <input id="name" type="text" name="entry.212036592" class="form__input"
+                                placeholder="マキタ モトキ" required>
                         </div>
-                
+
                         <div class="form__email">
-                          <label for="email" class="form__label">MAIL</label>
-                          <input id="email" type="email" name="entry.1158593220" class="form__input" placeholder="exampl@gmail.com"  required>
+                            <label for="email" class="form__label">MAIL</label>
+                            <input id="email" type="email" name="entry.1158593220" class="form__input"
+                                placeholder="exampl@gmail.com" required>
                         </div>
-                
+
                         <div class="form__message">
-                          <label for="message" class="form__label">MESSAGE</label>
-                          <textarea class="form__textarea" name="entry.1280718811" id="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
+                            <label for="message" class="form__label">MESSAGE</label>
+                            <textarea class="form__textarea" name="entry.1280718811" id="message"
+                                placeholder="お問い合わせ内容を入力してください" required></textarea>
                         </div>
-                
+
                         <div class="form__btn">
-                          <input type="submit" class="form__submit" value="送信">
+                            <input type="submit" class="form__submit" value="送信">
                         </div>
-                
-                
-                      </form>
-                
-              
-              
-                  </section>
+
+
+                    </form>
+
+
+
+                </section>
             </div>
             <!-- ここからセクション -->
         </main>
@@ -105,8 +119,11 @@
     </div>
 
 
-    <script>var submitted=false;</script>
-    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+    <script>
+        var submitted = false;
+    </script>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>

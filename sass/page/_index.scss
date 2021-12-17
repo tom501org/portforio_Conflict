@@ -1,4 +1,4 @@
-html{
+html {
     @include font__base;
 }
 
@@ -8,25 +8,26 @@ html{
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -6;
+    z-index: -10;
     background: #6D4739;
+
 }
 
 .bg__bg1 {
     @include position__base;
     position: fixed;
-    top:150px;
-    filter: blur(50px);
-    z-index: -5;
-    padding-top:50px;
+    top: 50px;
+    filter: blur(40px);
+    z-index: -9;
     mix-blend-mode: lighten;
+    
     background: url(./../images/mv.jpg) center no-repeat;
-    @media screen and (min-width: 768px) {
 
-    }
+    @media screen and (min-width: 768px) {}
 
     @media screen and (min-width: 1024px) {
-
+        top: 0px;
+        transform: scale(1.5);
     }
 }
 
@@ -34,50 +35,66 @@ html{
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -4;
-    mix-blend-mode: saturation;
-    background-color: #433B84;
+    z-index: -8;
+    mix-blend-mode:saturation;
+    background-color: #3a6645;
     isolation: isolate;
-    // background-image: url(/images/saido.png);
+        // background-image: url(/images/saido.png);
 }
 
 .bg__bg3 {
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -3;
+    z-index: -7;
     mix-blend-mode: difference;
     isolation: isolate;
-    // filter:contrast(4); 滑らかになる
     background-image: url(./../images/sai__grad.png);
 }
+// .bg__bg4{
+// @include position__base;
+//     height: (8000px);
+//     position: absolute;
+//     z-index: -6;
+//     mix-blend-mode: difference;
+//     background: #289649ee;  
+// }
 
-.bg__bg4{
+.bg__bg5 {
     @include position__base;
-    height: (8000px);  
+    height: (8000px);
     position: absolute;
-    z-index: -2;
+    z-index: -5;
     mix-blend-mode: color-dodge;
-    background: #433B84;
+    background: #5d51b9;
+
 }
 
 
 
 .mv {
-    position: relative;
-    z-index: -3;
+   position: relative;
+    height: 200vh;
+    z-index: -7;
     width: 100%;
-    height: 100vh;
-    margin-bottom: 5px;
-    mix-blend-mode: difference;
-    color: #d9f7e9;
+    margin-bottom: 500px;
+    mix-blend-mode:difference;
+    color: #e5eed6;
 
 
-    &__catch {
+&__ttl{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 40vh;
+}
+&__ttl--catch {
+    
         padding-top: 50%;
         text-align: center;
         font-size: 80px;
         margin: 0 auto;
+
 
         @media screen and (min-width: 768px) {
             font-size: 100px;
@@ -85,14 +102,12 @@ html{
 
         @media screen and (min-width: 1024px) {
             font-size: 200px;
-            padding-top: 21%;
-
+            padding-top: 16%;
+            line-height: 170px;
         }
     }
 
-    &__txt {
-        position: relative;
-        z-index: -1;
+    &__ttl--txt {
         font-size: 50px;
         text-align: center;
         margin: 0 auto;
@@ -111,7 +126,10 @@ html{
 
 
 .test {
+filter: blur(4px);
+opacity: 0.8;
     height: 100vh;
+    background: rgba(169, 176, 177, 0.507);
 }
 
 .test2 {
@@ -120,124 +138,31 @@ html{
 
 
 
-.contact__ttl {
-    position: relative;
-    z-index: 1;
-    font-size: 50px;
-    text-align: center;
-    color:rgb(218, 59, 59);
-    mix-blend-mode: difference;
-}
-
-.form {
-    max-width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media screen and (min-width: 768px) {
-      max-width: 100%;
-    }
-
-    @media screen and (min-width: 1024px) {
-        font-size: 200%;
-    }
-
-    &__name {
-        max-width: 500px;
-        width: 100%;
-        margin-bottom: 20px;
-      
-
-    }
-
-    &__email {
-        max-width: 500px;
-        width: 100%;
-        margin-bottom: 20px;
-
-    }
 
 
-    &__label {
-        mix-blend-mode: difference;
-        max-width: 500px;
-        width: 100%;
-        display: block;
-        padding: 20px 0;
-        color:#6f5140;
-        font-size: 20px;
-    }
 
-    &__input {
-        // width: 100%;
-        // padding: 10px;
-        // background: rgb(165, 164, 164);
-        // border-radius: 10px;
-        // font-size: 14px;
-        // letter-spacing: 0.2em;
-        width: 100%;
-    height: 25px;
-    border: none;
-    vertical-align: top;
-    opacity: 0.2;
-    }      
-
-    &__message {
-        max-width: 500px;
-        width: 100%;
-    }
-
-    &__textarea {
-        opacity: 0.2;
-        margin-bottom: 20px;
-        width: 100%;
-        height: 130px;
-        padding: 10px;
-        background: rgb(199, 199, 199);
-
-    }
-
-    &__submit {
-        -webkit-appearance: none;
-        opacity: 0.8;
-        width: 100%;
-        padding: 0 100px 0 100px;
-        background: rgb(29, 29, 29);
-        color: azure;
-        bottom: none;
-        border-radius: 24px;
-        font-size: 14px;
-        letter-spacing: 0.2em;
-
-        &:hover {
-            cursor: pointer;
-            background: rgb(186, 186, 186);
-        }
-    }
-}
 
 
 main::before {
-    will-change: auto;
-    animation: grain 12s steps(8) infinite;
+    will-change: contents;
+    animation: grain 12s steps(5) infinite;
     background-image: url(./../images/noise.png);
     content: '';
     height: 300%;
     left: -50%;
     position: fixed;
-    opacity:0 ;
+    opacity: 0.3;
     top: -100%;
     width: 300%;
     z-index: -1;
+
     @media screen and (min-width: 768px) {
-        opacity:0.8 ; 
-      }
-  
-      @media screen and (min-width: 1024px) {
-        opacity:0.8 ;
-      }
+        opacity: 0.8;
+    }
+
+    @media screen and (min-width: 1024px) {
+        opacity: 0.8;
+    }
 }
 
 @keyframes grain {
@@ -284,3 +209,101 @@ main::before {
     }
 }
 
+.contact__ttl {
+    position: relative;
+    z-index: 1;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(218, 59, 59);
+    mix-blend-mode: difference;
+}
+
+.form {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 200%;
+    }
+
+    &__name {
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 20px;
+
+
+    }
+
+    &__email {
+        max-width: 500px;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+
+    &__label {
+        mix-blend-mode: difference;
+        max-width: 500px;
+        width: 100%;
+        display: block;
+        padding: 20px 0;
+        color: #6f5140;
+        font-size: 20px;
+    }
+
+    &__input {
+        // width: 100%;
+        // padding: 10px;
+        // background: rgb(165, 164, 164);
+        // border-radius: 10px;
+        // font-size: 14px;
+        // letter-spacing: 0.2em;
+        width: 100%;
+        height: 25px;
+        border: none;
+        vertical-align: top;
+        opacity: 0.2;
+    }
+
+    &__message {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    &__textarea {
+        opacity: 0.2;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 130px;
+        padding: 10px;
+        background: rgb(199, 199, 199);
+
+    }
+
+    &__submit {
+        -webkit-appearance: none;
+        opacity: 0.8;
+        width: 100%;
+        padding: 0 100px 0 100px;
+        background: rgb(29, 29, 29);
+        color: azure;
+        bottom: none;
+        border-radius: 24px;
+        font-size: 14px;
+        letter-spacing: 0.2em;
+
+        &:hover {
+            cursor: pointer;
+            background: rgb(186, 186, 186);
+        }
+    }
+}
