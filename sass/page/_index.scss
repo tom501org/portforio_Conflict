@@ -57,7 +57,7 @@ html {
 //     position: absolute;
 //     z-index: -6;
 //     mix-blend-mode: difference;
-//     background: #289649ee;  
+//     background-image:url(./../grad__meian.png);
 // }
 
 .bg__bg5 {
@@ -157,6 +157,24 @@ margin-bottom: 100px;
 .test2 {
     margin-bottom: 100px;
 }
+
+.test__container{
+    position: absolute;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 800px;
+    height: 600px;
+    background: #000;
+}
+
+.test__circle{
+    position: absolute;
+    z-index: 2;
+}
+
+
 
 
 
