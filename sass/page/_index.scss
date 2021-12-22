@@ -210,72 +210,72 @@ html {
 
 
 
-/////砂嵐
-// main::before {
-//     will-change: contents;
-//     animation: grain 12s steps(5) infinite;
-//     background-image: url(./../images/noise.png);
-//     content: '';
-//     height: 300%;
-//     left: -50%;
-//     position: fixed;
-//     opacity: 0.3;
-//     top: -100%;
-//     width: 300%;
-//     z-index: -1;
 
-//     @media screen and (min-width: 768px) {
-//         opacity: 0.8;
-//     }
+main::before {
+    will-change: contents;
+    animation: grain 12s steps(5) infinite;
+    background-image: url(./../images/noise.png);
+    content: '';
+    height: 300%;
+    left: -50%;
+    position: fixed;
+    opacity: 0.3;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
 
-//     @media screen and (min-width: 1024px) {
-//         opacity: 0.7;
-//     }
-// }
+    @media screen and (min-width: 768px) {
+        opacity: 0.8;
+    }
 
-// @keyframes grain {
+    @media screen and (min-width: 1024px) {
+        opacity: 0.7;
+    }
+}
 
-//     0%,
-//     100% {
-//         transform: translate(0, 0);
-//     }
+@keyframes grain {
 
-//     10% {
-//         transform: translate(-5%, -10%);
-//     }
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
 
-//     20% {
-//         transform: translate(-15%, 5%);
-//     }
+    10% {
+        transform: translate(-5%, -10%);
+    }
 
-//     30% {
-//         transform: translate(7%, -25%);
-//     }
+    20% {
+        transform: translate(-15%, 5%);
+    }
 
-//     40% {
-//         transform: translate(-5%, 25%);
-//     }
+    30% {
+        transform: translate(7%, -25%);
+    }
 
-//     50% {
-//         transform: translate(-15%, 10%);
-//     }
+    40% {
+        transform: translate(-5%, 25%);
+    }
 
-//     60% {
-//         transform: translate(15%, 0%);
-//     }
+    50% {
+        transform: translate(-15%, 10%);
+    }
 
-//     70% {
-//         transform: translate(0%, 15%);
-//     }
+    60% {
+        transform: translate(15%, 0%);
+    }
 
-//     80% {
-//         transform: translate(3%, 35%);
-//     }
+    70% {
+        transform: translate(0%, 15%);
+    }
 
-//     90% {
-//         transform: translate(-10%, 10%);
-//     }
-// }
+    80% {
+        transform: translate(3%, 35%);
+    }
+
+    90% {
+        transform: translate(-10%, 10%);
+    }
+}
 
 
 
