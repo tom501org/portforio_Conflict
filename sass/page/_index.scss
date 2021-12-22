@@ -2,15 +2,12 @@ html {
     @include font__base;
 }
 
-
-
 .bg__bg0 {
     @include position__base;
     height: (8000px);
     position: absolute;
     z-index: -10;
     background: #6D4739;
-
 }
 
 // .bg__bg1 {
@@ -20,33 +17,30 @@ html {
 //     filter: blur(40px);
 //     z-index: -9;
 //     mix-blend-mode: lighten;
-
 //     background: url(./../images/mv.jpg) center no-repeat;
-
-//     @media screen and (min-width: 768px) {}
-
-//     @media screen and (min-width: 1024px) {
-//         top: 0px;
-//         transform: scale(1.5);
-//     }
-// }
 
 .bg__bg1 {
     position: fixed;
-    animation: rotate-anime 70s linear infinite;
-    will-change:transform,rotate;
+    z-index: -9;
+    animation: rotate-anime 75s linear infinite;
+    // will-change: transform, rotate;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
     top: -100%;
-    right: -500px;
+    right: -950px;
     width: 3342px;
     height: 3342px;
-    filter: blur(50px);
-    z-index: -9;
     mix-blend-mode: lighten;
-    visibility:visible;
-  // opacity: 0.3;
+    filter: blur(40px);
 
+    // opacity: 0.3;
+    @media screen and (min-width: 768px) {
+        right: -750px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        right: -750px;
+    }
 }
 
 @keyframes rotate-anime {
@@ -56,6 +50,7 @@ html {
 
     100% {
         transform: rotate(-360deg);
+
     }
 }
 
@@ -67,8 +62,8 @@ html {
     position: absolute;
     z-index: -8;
     mix-blend-mode: saturation;
-    background-color: #3a6645;
     isolation: isolate;
+    background-color: #3a6645;
 }
 
 .bg__bg3 {
@@ -77,6 +72,7 @@ html {
     position: absolute;
     z-index: -7;
     mix-blend-mode: difference;
+
     background-image: url(./../images/sai__grad.png);
 }
 
@@ -95,6 +91,8 @@ html {
     position: absolute;
     z-index: -5;
     mix-blend-mode: color-dodge;
+
+
     background: #5d51b9;
 
 }
@@ -182,25 +180,10 @@ html {
     color: #8279b6;
     margin-bottom: 100px;
     height: 100vh;
-    // background: rgb(0, 0, 0);
+    background: rgb(54, 45, 56);
 }
 
-.test2 {
-    margin-bottom: 100px;
-}
 
-// .test__container {
-//     position: absolute;
-//     top:0;
-//     left: 20%;
-//     z-index: 6;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 800px;
-//     height: 600px;
-//     background: #000;
-// }
 
 
 
@@ -212,24 +195,24 @@ html {
 
 
 main::before {
-    will-change: contents;
+    will-change: transform, translate;
     animation: grain 12s steps(5) infinite;
     background-image: url(./../images/noise.png);
     content: '';
     height: 300%;
     left: -50%;
     position: fixed;
-    opacity: 0.3;
+    opacity: 0.4;
     top: -100%;
     width: 300%;
     z-index: -1;
 
     @media screen and (min-width: 768px) {
-        opacity: 0.8;
+        opacity: 0.6;
     }
 
     @media screen and (min-width: 1024px) {
-        opacity: 0.7;
+        opacity: 0.8;
     }
 }
 
