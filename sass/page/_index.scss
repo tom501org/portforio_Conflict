@@ -13,33 +13,62 @@ html {
 
 }
 
+// .bg__bg1 {
+//     @include position__base;
+//     position: fixed;
+//     top: 50px;
+//     filter: blur(40px);
+//     z-index: -9;
+//     mix-blend-mode: lighten;
+
+//     background: url(./../images/mv.jpg) center no-repeat;
+
+//     @media screen and (min-width: 768px) {}
+
+//     @media screen and (min-width: 1024px) {
+//         top: 0px;
+//         transform: scale(1.5);
+//     }
+// }
+
 .bg__bg1 {
-    @include position__base;
     position: fixed;
-    top: 50px;
-    filter: blur(40px);
+    animation: rotate-anime 70s linear infinite;
+    will-change:transform,rotate;
+    background: url(./../images/mv.jpg) center/cover;
+    content: '';
+    top: -100%;
+    right: -500px;
+    width: 3342px;
+    height: 3342px;
+    filter: blur(50px);
     z-index: -9;
     mix-blend-mode: lighten;
-    
-    background: url(./../images/mv.jpg) center no-repeat;
+    visibility:visible;
+  // opacity: 0.3;
 
-    @media screen and (min-width: 768px) {}
+}
 
-    @media screen and (min-width: 1024px) {
-        top: 0px;
-        transform: scale(1.5);
+@keyframes rotate-anime {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
+
+
 
 .bg__bg2 {
     @include position__base;
     height: (8000px);
     position: absolute;
     z-index: -8;
-    mix-blend-mode:saturation;
+    mix-blend-mode: saturation;
     background-color: #3a6645;
     isolation: isolate;
-        // background-image: url(/images/saido.png);
 }
 
 .bg__bg3 {
@@ -48,15 +77,15 @@ html {
     position: absolute;
     z-index: -7;
     mix-blend-mode: difference;
-    isolation: isolate;
     background-image: url(./../images/sai__grad.png);
 }
+
 // .bg__bg4{
 // @include position__base;
 //     height: (8000px);
 //     position: absolute;
 //     z-index: -6;
-//     mix-blend-mode: difference;
+//     mix-blend-mode: saturation;
 //     background-image:url(./../grad__meian.png);
 // }
 
@@ -73,13 +102,14 @@ html {
 
 
 .mv {
-   position: relative;
+    position: relative;
     height: 200vh;
     z-index: -7;
     width: 100%;
     margin-bottom: 300px;
-    mix-blend-mode:difference;
-    color: #e5eed6;
+    mix-blend-mode: difference;
+    color: #d1dac2;
+
     @media screen and (min-width: 768px) {
         height: 200vh;
         margin-bottom: 500px;
@@ -90,24 +120,26 @@ html {
         margin-bottom: 530px;
     }
 
-&__ttl{
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 10vh;
-    margin-bottom: 300px;
-    @media screen and (min-width: 768px) {
-        height: 40vh;
+    &__ttl {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 10vh;
         margin-bottom: 300px;
+
+        @media screen and (min-width: 768px) {
+            height: 40vh;
+            margin-bottom: 300px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            height: 40vh;
+            margin-bottom: 300px;
+        }
     }
 
-    @media screen and (min-width: 1024px) {
-        height: 40vh;
-        margin-bottom: 300px;
-    }
-}
-&__ttl--catch {
-    
+    &__ttl--catch {
+
         padding-top: 70%;
         text-align: center;
         font-size: 40px;
@@ -145,34 +177,105 @@ html {
 
 
 .test {
-// filter: blur(2px);
-mix-blend-mode:overlay;
-color:#8279b6;
-opacity: 0.4;
-margin-bottom: 100px;
+    filter: blur(2px);
+    mix-blend-mode: overlay;
+    color: #8279b6;
+    margin-bottom: 100px;
     height: 100vh;
-    background: rgb(8, 255, 41);
+    // background: rgb(0, 0, 0);
 }
 
 .test2 {
     margin-bottom: 100px;
 }
 
-.test__container{
+.test__container {
     position: absolute;
+    top:0;
+    left: 20%;
     z-index: 6;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 800px;
     height: 600px;
     background: #000;
 }
 
-.test__circle{
-    position: absolute;
-    z-index: 2;
-}
+
+
+
+
+
+
+
+
+/////砂嵐
+// main::before {
+//     will-change: contents;
+//     animation: grain 12s steps(5) infinite;
+//     background-image: url(./../images/noise.png);
+//     content: '';
+//     height: 300%;
+//     left: -50%;
+//     position: fixed;
+//     opacity: 0.3;
+//     top: -100%;
+//     width: 300%;
+//     z-index: -1;
+
+//     @media screen and (min-width: 768px) {
+//         opacity: 0.8;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         opacity: 0.7;
+//     }
+// }
+
+// @keyframes grain {
+
+//     0%,
+//     100% {
+//         transform: translate(0, 0);
+//     }
+
+//     10% {
+//         transform: translate(-5%, -10%);
+//     }
+
+//     20% {
+//         transform: translate(-15%, 5%);
+//     }
+
+//     30% {
+//         transform: translate(7%, -25%);
+//     }
+
+//     40% {
+//         transform: translate(-5%, 25%);
+//     }
+
+//     50% {
+//         transform: translate(-15%, 10%);
+//     }
+
+//     60% {
+//         transform: translate(15%, 0%);
+//     }
+
+//     70% {
+//         transform: translate(0%, 15%);
+//     }
+
+//     80% {
+//         transform: translate(3%, 35%);
+//     }
+
+//     90% {
+//         transform: translate(-10%, 10%);
+//     }
+// }
 
 
 
@@ -183,71 +286,11 @@ margin-bottom: 100px;
 
 
 
-main::before {
-    will-change: contents;
-    animation: grain 12s steps(5) infinite;
-    background-image: url(./../images/noise.png);
-    content: '';
-    height: 300%;
-    left: -50%;
-    position: fixed;
-    opacity: 0.3;
-    top: -100%;
-    width: 300%;
-    z-index: -1;
 
-    @media screen and (min-width: 768px) {
-        opacity: 0.8;
-    }
 
-    @media screen and (min-width: 1024px) {
-        opacity: 0.7;
-    }
-}
 
-@keyframes grain {
 
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
 
-    10% {
-        transform: translate(-5%, -10%);
-    }
-
-    20% {
-        transform: translate(-15%, 5%);
-    }
-
-    30% {
-        transform: translate(7%, -25%);
-    }
-
-    40% {
-        transform: translate(-5%, 25%);
-    }
-
-    50% {
-        transform: translate(-15%, 10%);
-    }
-
-    60% {
-        transform: translate(15%, 0%);
-    }
-
-    70% {
-        transform: translate(0%, 15%);
-    }
-
-    80% {
-        transform: translate(3%, 35%);
-    }
-
-    90% {
-        transform: translate(-10%, 10%);
-    }
-}
 
 .contact__ttl {
     position: relative;
