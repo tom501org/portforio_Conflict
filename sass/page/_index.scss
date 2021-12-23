@@ -7,7 +7,7 @@ html {
 .bg__bg0 {
     z-index: -10;
     @include position__base;
-    height: (8000px);
+    height: (9800px);
     position: absolute;
     background: #6D4739;
 
@@ -17,7 +17,7 @@ html {
     z-index: -9;
     position: fixed;
     animation: rotate-anime 70s linear infinite;
-    // will-change: transform, rotate;
+    will-change: transform, rotate;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
     top: -100%;
@@ -43,7 +43,7 @@ html {
 .bg__bg2 {
     z-index: -8;
     @include position__base;
-    height: (8000px);
+    height: (9800px);
     position: absolute;
     mix-blend-mode: saturation;
     background-color: #3a6645;
@@ -53,7 +53,7 @@ html {
 .bg__bg3 {
     z-index: -7;
     @include position__base;
-    height: (8000px);
+    height: (9800px);
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/sai__grad.png);
@@ -62,7 +62,7 @@ html {
 .bg__bg4 {
     z-index: -6;
     @include position__base;
-    height: (8000px);
+    height: (9800px);
     position: absolute;
     mix-blend-mode: color-dodge;
     background: #5d51b9;
@@ -182,7 +182,7 @@ html {
 
 main::before {
     position: fixed;
-    // will-change: transform,translate;
+    will-change: transform,translate;
     animation: grain 12s steps(5) infinite;
     background-image: url(./../images/noise.png);
     content: '';
@@ -199,7 +199,7 @@ main::before {
     }
 
     @media screen and (min-width: 1024px) {
-        opacity: 0.7;
+        opacity: 0.6;
     }
 }
 
@@ -264,7 +264,7 @@ main::before {
 
 .contact__ttl {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     font-size: 50px;
     text-align: center;
     color: rgb(218, 59, 59);
@@ -272,6 +272,8 @@ main::before {
 }
 
 .form {
+    position: relative;
+    z-index: 1;
     max-width: 80%;
     margin: 0 auto;
     display: flex;
@@ -291,8 +293,6 @@ main::before {
         max-width: 500px;
         width: 100%;
         margin-bottom: 20px;
-
-
     }
 
     &__email {
@@ -324,7 +324,7 @@ main::before {
         height: 25px;
         border: none;
         vertical-align: top;
-        opacity: 0.2;
+        // opacity: 0.2;
     }
 
     &__message {
@@ -333,7 +333,7 @@ main::before {
     }
 
     &__textarea {
-        opacity: 0.2;
+        // opacity: 0.2;
         margin-bottom: 20px;
         width: 100%;
         height: 130px;
@@ -344,7 +344,7 @@ main::before {
 
     &__submit {
         -webkit-appearance: none;
-        opacity: 0.8;
+        // opacity: 0.8;
         width: 100%;
         padding: 0 100px 0 100px;
         background: rgb(29, 29, 29);
@@ -353,6 +353,7 @@ main::before {
         border-radius: 24px;
         font-size: 14px;
         letter-spacing: 0.2em;
+        margin-bottom: 100px;
 
         &:hover {
             cursor: pointer;
