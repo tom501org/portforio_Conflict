@@ -9,7 +9,8 @@ html {
     @include position__base;
     height: (9800px);
     position: absolute;
-    background: #6D4739;
+    // background: #6D4739;
+    background: #383331;
 
 }
 
@@ -246,20 +247,6 @@ main::before {
         transform: translate(-10%, 10%);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .contact__ttl {
