@@ -5,36 +5,19 @@ html {
 
 
 .bg__bg0 {
+    z-index: -10;
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -10;
     background: #6D4739;
 
 }
 
-// .bg__bg1 {
-//     @include position__base;
-//     position: fixed;
-//     top: 50px;
-//     filter: blur(40px);
-//     z-index: -9;
-//     mix-blend-mode: lighten;
-
-//     background: url(./../images/mv.jpg) center no-repeat;
-
-//     @media screen and (min-width: 768px) {}
-
-//     @media screen and (min-width: 1024px) {
-//         top: 0px;
-//         transform: scale(1.5);
-//     }
-// }
-
 .bg__bg1 {
+    z-index: -9;
     position: fixed;
     animation: rotate-anime 70s linear infinite;
-    will-change:transform,rotate;
+    will-change: transform, rotate;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
     top: -100%;
@@ -42,18 +25,14 @@ html {
     width: 3342px;
     height: 3342px;
     filter: blur(50px);
-    z-index: -9;
     mix-blend-mode: lighten;
-    visibility:visible;
-  // opacity: 0.3;
-
+    visibility: visible;
 }
 
 @keyframes rotate-anime {
     0% {
         transform: rotate(0);
     }
-
     100% {
         transform: rotate(-360deg);
     }
@@ -62,49 +41,39 @@ html {
 
 
 .bg__bg2 {
+    z-index: -8;
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -8;
     mix-blend-mode: saturation;
     background-color: #3a6645;
     isolation: isolate;
 }
 
 .bg__bg3 {
+    z-index: -7;
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -7;
     mix-blend-mode: difference;
     background-image: url(./../images/sai__grad.png);
 }
 
-// .bg__bg4{
-// @include position__base;
-//     height: (8000px);
-//     position: absolute;
-//     z-index: -6;
-//     mix-blend-mode: saturation;
-//     background-image:url(./../grad__meian.png);
-// }
-
-.bg__bg5 {
+.bg__bg4 {
+    z-index: -6;
     @include position__base;
     height: (8000px);
     position: absolute;
-    z-index: -5;
     mix-blend-mode: color-dodge;
     background: #5d51b9;
-
 }
 
 
 
 .mv {
+    z-index: -7;
     position: relative;
     height: 200vh;
-    z-index: -7;
     width: 100%;
     margin-bottom: 300px;
     mix-blend-mode: difference;
