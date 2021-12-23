@@ -17,7 +17,7 @@ html {
     z-index: -9;
     position: fixed;
     animation: rotate-anime 70s linear infinite;
-    will-change: transform, rotate;
+    // will-change: transform, rotate;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
     top: -100%;
@@ -181,13 +181,14 @@ html {
 
 
 main::before {
-    will-change: contents;
+    position: fixed;
+    // will-change: transform,translate;
     animation: grain 12s steps(5) infinite;
     background-image: url(./../images/noise.png);
     content: '';
     height: 300%;
     left: -50%;
-    position: fixed;
+
     opacity: 0.3;
     top: -100%;
     width: 300%;
