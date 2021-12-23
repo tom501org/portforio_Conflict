@@ -7,8 +7,8 @@ html {
     @include position__base;
     height: (9800px);
     position: absolute;
-    background: #6D4739;
-    // background: #523326;
+    // background: #6D4739;
+    background: #962958;
 }
 
 .bg__bg1 {
@@ -18,13 +18,19 @@ html {
     will-change: transform, rotate;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
-    top: -100%;
-    right: -500px;
-    width: 3342px;
-    height: 3342px;
-    filter: blur(40px);
+    top: -20%;
+    right: -1500px;
+    width: 2342px;
+    height: 2342px;
+    filter: blur(38px);
     mix-blend-mode: lighten;
-    visibility: visible;
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        top: -80%;
+        right: -250px;
+        width: 2342px;
+        height: 2342px;
+    }
 }
 
 @keyframes rotate-anime {
