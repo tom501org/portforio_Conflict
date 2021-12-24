@@ -299,6 +299,43 @@ html {
   }
 }
 
+.consept {
+  position: relative;
+}
+.consept__ttl {
+  font-size: 20px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+.consept__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin: 0 auto;
+  line-height: 34px;
+  width: 200px;
+  height: 100%;
+}
+
 .test {
   -webkit-filter: blur(2px);
           filter: blur(2px);
@@ -306,10 +343,6 @@ html {
   color: #8279b6;
   margin-bottom: 100px;
   height: 100vh;
-}
-
-.test2 {
-  margin-bottom: 100px;
 }
 
 .contact__ttl {
