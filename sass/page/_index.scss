@@ -5,7 +5,7 @@ html {
 .bg__bg0 {
     z-index: -10;
     @include position__base;
-    height: (9800px);
+    height: (8000px);
     position: absolute;
     background: #6D4739;
     // background: #962958;
@@ -16,6 +16,7 @@ html {
     position: fixed;
     animation: rotate-anime 70s linear infinite;
     will-change: transform, rotate;
+    visibility: visible;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
     top: -20%;
@@ -45,7 +46,7 @@ html {
 .bg__bg2 {
     z-index: -8;
     @include position__base;
-    height: (9800px);
+    height: (8000px);
     position: absolute;
     mix-blend-mode: saturation;
     background-color: #3a6645;
@@ -55,7 +56,7 @@ html {
 .bg__bg3 {
     z-index: -7;
     @include position__base;
-    height: (9800px);
+    height: (8000px);
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/sai__grad.png);
@@ -64,7 +65,7 @@ html {
 .bg__bg4 {
     z-index: -6;
     @include position__base;
-    height: (9800px);
+    height: (8000px);
     position: absolute;
     mix-blend-mode: color-dodge;
     background: #5d51b9;
