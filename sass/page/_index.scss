@@ -8,7 +8,7 @@ html {
     position: relative;
     height: 200vh;
     width: 100%;
-    margin-bottom: 300px;
+    margin-bottom: 600px;
     mix-blend-mode: difference;
     color: #dce8ca;
 
@@ -26,7 +26,7 @@ html {
         position: sticky;
         top: 0;
         left: 0;
-        height: 10vh;
+        height: 1100vh;
         margin-bottom: 300px;
 
         @media screen and (min-width: 768px) {
@@ -78,16 +78,25 @@ html {
 
 
     &__ttl {
-        font-size: 20px;
+      
+        font-size: 25px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
-        margin-bottom: 50px;
+        color: rgba(255, 255, 255, 0.618);
+        margin-bottom: 40px;
+        text-align:center;
+        @media screen and (min-width: 768px) {} 
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
+        }
+   
     }
 
     &__txt {
+        font-weight: lighter;
+        font-family: 'Klee One', cursive;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -96,10 +105,14 @@ html {
         font-size: 14px;
         margin: 0 auto;
         line-height: 34px;
-        width: 200px;
+        width:330px;
         height: 100%;
-    
-
+        @media screen and (min-width: 768px) {} 
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+            width:400px;
+        }
+       
     }
 }
 
@@ -252,7 +265,7 @@ html {
 
 @keyframes rotate-anime {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(-50deg);
     }
 
     100% {
