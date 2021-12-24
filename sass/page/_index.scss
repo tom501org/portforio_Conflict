@@ -14,8 +14,8 @@ html {
 .bg__bg1 {
     z-index: -9;
     position: fixed;
+    will-change: transform;
     animation: rotate-anime 70s linear infinite;
-    will-change: transform, rotate;
     visibility: visible;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
@@ -27,10 +27,10 @@ html {
     mix-blend-mode: lighten;
     @media screen and (min-width: 768px) {}
     @media screen and (min-width: 1024px) {
-        top: -80%;
-        right: -250px;
-        width: 2342px;
-        height: 2342px;
+        top: -137px;
+        right: -30%;
+        width: 3342px;
+        height: 3342px;
     }
 }
 
@@ -50,6 +50,7 @@ html {
     position: absolute;
     mix-blend-mode: saturation;
     background-color: #3a6645;
+    // background-color: #2f3d3c;
     isolation: isolate;
 }
 
