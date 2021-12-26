@@ -2,7 +2,6 @@ html {
     @include font__base;
 }
 
-
 .mv {
     z-index: -7;
     position: relative;
@@ -11,62 +10,51 @@ html {
     margin-bottom: 280px;
     mix-blend-mode: difference;
     color: #dce8ca;
-
     @media screen and (min-width: 768px) {
         height: 200vh;
         margin-bottom: 500px;
     }
-
     @media screen and (min-width: 1024px) {
         height: 200vh;
         margin-bottom: 530px;
     }
-
     &__ttl {
         position: sticky;
         top: 0;
         left: 0;
         height: 80vh;
         margin-bottom: 300px;
-
         @media screen and (min-width: 768px) {
             height: 40vh;
             margin-bottom: 300px;
         }
-
         @media screen and (min-width: 1024px) {
             height: 40vh;
             margin-bottom: 300px;
         }
     }
-
     &__ttl--catch {
         padding-top: 70%;
         text-align: center;
         font-size: 40px;
         margin: 0 auto;
         overflow: hidden;
-
         @media screen and (min-width: 768px) {
             font-size: 100px;
         }
-
         @media screen and (min-width: 1024px) {
             font-size: 200px;
             padding-top: 16%;
             line-height: 170px;
         }
     }
-
     &__ttl--txt {
         font-size: 20px;
         text-align: center;
         margin: 0 auto;
-
         @media screen and (min-width: 768px) {
             font-size: 50px;
         }
-
         @media screen and (min-width: 1024px) {
             font-size: 50px;
         }
@@ -75,10 +63,7 @@ html {
 
 .consept {
     position: relative;
-
-
     &__ttl {
-      
         font-size: 25px;
         margin: 0 auto;
         display: flex;
@@ -86,36 +71,32 @@ html {
         align-items: center;
         color: rgba(255, 255, 255, 0.618);
         margin-bottom: 40px;
-        text-align:center;
-        @media screen and (min-width: 768px) {} 
+        text-align: center;
+        @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             font-size: 40px;
         }
-   
     }
-
     &__txt {
         font-weight: lighter;
         font-family: 'Klee One', cursive;
         display: flex;
         justify-content: center;
         align-items: center;
-        text-align:center;
+        text-align: center;
         color: #fff;
         font-size: 14px;
         margin: 0 auto;
         line-height: 34px;
-        width:330px;
+        width: 330px;
         height: 100%;
-        @media screen and (min-width: 768px) {} 
+        @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             font-size: 18px;
-            width:400px;
+            width: 400px;
         }
-       
     }
 }
-
 
 .test {
     filter: blur(2px);
@@ -125,9 +106,6 @@ html {
     height: 100vh;
     // background: rgb(0, 0, 0);
 }
-
-
-
 
 .contact__ttl {
     position: relative;
@@ -147,27 +125,22 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     @media screen and (min-width: 768px) {
         max-width: 100%;
     }
-
     @media screen and (min-width: 1024px) {
         font-size: 200%;
     }
-
     &__name {
         max-width: 500px;
         width: 100%;
         margin-bottom: 20px;
     }
-
     &__email {
         max-width: 500px;
         width: 100%;
         margin-bottom: 20px;
     }
-
     &__label {
         mix-blend-mode: difference;
         max-width: 500px;
@@ -177,7 +150,6 @@ html {
         color: #6f5140;
         font-size: 20px;
     }
-
     &__input {
         // width: 100%;
         // padding: 10px;
@@ -191,12 +163,10 @@ html {
         vertical-align: top;
         // opacity: 0.2;
     }
-
     &__message {
         max-width: 500px;
         width: 100%;
     }
-
     &__textarea {
         // opacity: 0.2;
         margin-bottom: 20px;
@@ -205,7 +175,6 @@ html {
         padding: 10px;
         background: rgb(199, 199, 199);
     }
-
     &__submit {
         -webkit-appearance: none;
         // opacity: 0.8;
@@ -218,15 +187,12 @@ html {
         font-size: 14px;
         letter-spacing: 0.2em;
         margin-bottom: 100px;
-
         &:hover {
             cursor: pointer;
             background: rgb(186, 186, 186);
         }
     }
 }
-
-
 
 .bg__bg0 {
     z-index: -10;
@@ -240,6 +206,7 @@ html {
 .bg__bg1 {
     z-index: -9;
     position: fixed;
+    transform: rotate(-50deg);
     will-change: transform;
     animation: rotate-anime 70s linear infinite;
     visibility: visible;
@@ -249,12 +216,9 @@ html {
     left: -200px;
     width: 1468px;
     height: 1468px;
-    transform: rotate(180deg);
     filter: blur(50px);
     mix-blend-mode: lighten;
-
     @media screen and (min-width: 768px) {}
-
     @media screen and (min-width: 1024px) {
         top: -1150px;
         left: -200px;
@@ -267,12 +231,10 @@ html {
     0% {
         transform: rotate(-50deg);
     }
-
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(-410deg);
     }
 }
-
 
 .bg__bg2 {
     z-index: -8;
@@ -281,14 +243,11 @@ html {
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/smf__grad.png);
-
     @media screen and (min-width: 768px) {}
-
     @media screen and (min-width: 1024px) {
         background-image: url(./../images/sai__grad.png);
     }
 }
-
 
 main::before {
     position: fixed;
@@ -302,55 +261,43 @@ main::before {
     top: -100%;
     width: 300%;
     z-index: -1;
-
     @media screen and (min-width: 768px) {
         opacity: 0.8;
     }
-
     @media screen and (min-width: 1024px) {
         opacity: 0.6;
     }
 }
 
 @keyframes grain {
-
     0%,
     100% {
         transform: translate(0, 0);
     }
-
     10% {
         transform: translate(-5%, -10%);
     }
-
     20% {
         transform: translate(-15%, 5%);
     }
-
     30% {
         transform: translate(7%, -25%);
     }
-
     40% {
         transform: translate(-5%, 25%);
     }
-
     50% {
         transform: translate(-15%, 10%);
     }
-
     60% {
         transform: translate(15%, 0%);
     }
-
     70% {
         transform: translate(0%, 15%);
     }
-
     80% {
         transform: translate(3%, 35%);
     }
-
     90% {
         transform: translate(-10%, 10%);
     }
