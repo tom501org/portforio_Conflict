@@ -26,8 +26,8 @@
 
 .btn {
     width: 20px;
-    height: 20px;
-    right: 30px;
+    height: 5px;
+    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,11 +36,19 @@
     &__top {
         @include btn(-10px);
     }
-    &__middle {
-        @include btn;
-    }
+ 
     &__bottom {
         @include btn(10px);
+    }
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 5px;
+        right: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 40px;
+        height: 5px;
+        right: 20px;
     }
 }
 
