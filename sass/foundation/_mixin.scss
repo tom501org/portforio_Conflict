@@ -25,3 +25,11 @@
   width: 100%;
   height: ($height);
 }
+
+@mixin font__meno {
+  font-family: meno-banner, serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+}

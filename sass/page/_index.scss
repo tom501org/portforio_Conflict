@@ -1,16 +1,15 @@
-html {
-
-}
+html {}
 
 body {
     cursor: crosshair;
 }
 
 .heading {
+    @include font__meno;
     position: fixed;
     text-align: center;
     text-transform: uppercase;
-    color:rgba(255, 255, 255, 0.165);
+    color: rgba(255, 255, 255, 0.165);
     font-family: meno-banner, serif;
     font-size: 10vw;
     // font-weight: 300;
@@ -32,6 +31,7 @@ body {
         mix-blend-mode: overlay;
 
     }
+
     @media screen and (min-width: 768px) {
         margin-bottom: -6vw;
     }
@@ -57,6 +57,7 @@ body {
 }
 
 #stalker {
+    display: none;
     position: fixed;
     width: 200px;
     height: 200px;
@@ -71,9 +72,14 @@ body {
     background: rgba(238, 99, 99, 0.987);
     mix-blend-mode: saturation;
     opacity: 0;
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1024px) {}
 }
 
 .mv {
+    @include font__meno;
     z-index: -7;
     position: relative;
     height: 200vh;
@@ -93,7 +99,7 @@ body {
     }
 
     &__ttl {
-        font-family: meno-banner, serif;
+        // font-family: meno-banner, serif;
         position: sticky;
         top: 0;
         left: 0;
@@ -112,7 +118,7 @@ body {
     }
 
     &__ttl--catch {
-      
+
         padding-top: 70%;
         text-align: center;
         font-size: 40px;
@@ -131,7 +137,7 @@ body {
     }
 
     &__ttl--txt {
-     
+
         font-size: 15px;
         text-align: center;
         margin: 0 auto;
@@ -153,7 +159,8 @@ body {
     position: relative;
 
     &__ttl {
-        font-family: meno-banner, serif;
+        @include  font__meno;
+        // font-family: meno-banner, serif;
         font-size: 25px;
         margin: 0 auto;
         display: flex;
