@@ -1,11 +1,48 @@
 html {
-    @include font__base;
+
 }
 
 body {
-    position: relative;
     cursor: crosshair;
 }
+
+.heading {
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 0.165);
+    font-family: meno-banner, serif;
+    font-size: 10vw;
+    // font-weight: 300;
+    left: 0;
+    line-height: 1;
+    margin: -5vw 0 0;
+    top: 0;
+    transform-origin: 50% 40%;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1000;
+
+    &--down {
+        bottom: 0;
+        margin-bottom: -5vw;
+        margin-top: 0;
+        top: auto;
+        transform-origin: 50% 60%;
+        mix-blend-mode: overlay;
+
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: -6vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: -7vw;
+    }
+}
+
+
+
 
 #cursor {
     position: fixed;
@@ -14,7 +51,7 @@ body {
     // width: 10px;
     // height: 10px;
     margin: 0 auto;
-    z-index: 5;
+    z-index: 7;
     pointer-events: none;
     opacity: 0;
 }
@@ -25,13 +62,14 @@ body {
     height: 200px;
     border-radius: 200px;
     margin: -50px 0 0 -50px;
-    z-index: 4;
+    z-index: 6;
     pointer-events: none;
     // background: rgba(255, 255, 255, 0.26);
     // mix-blend-mode: color-dodge;
-    background: rgb(245, 238, 238.26);
-    mix-blend-mode: difference;
-    opacity: 0;
+    // border: 2px solid rgb(255, 255, 255);
+    // background-clip: padding-box; 
+    background: rgba(238, 99, 99, 0.987);
+    mix-blend-mode: saturation;
 }
 
 .mv {
@@ -41,7 +79,7 @@ body {
     width: 100%;
     margin-bottom: 280px;
     mix-blend-mode: difference;
-    color: #dce8ca;
+    color: #dce8ca8c;
 
     @media screen and (min-width: 768px) {
         height: 200vh;
@@ -54,6 +92,7 @@ body {
     }
 
     &__ttl {
+        font-family: meno-banner, serif;
         position: sticky;
         top: 0;
         left: 0;
@@ -72,6 +111,7 @@ body {
     }
 
     &__ttl--catch {
+      
         padding-top: 70%;
         text-align: center;
         font-size: 40px;
@@ -83,14 +123,15 @@ body {
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: 200px;
-            padding-top: 16%;
-            line-height: 170px;
+            font-size: 150px;
+            padding-top: 17%;
+            line-height: 140px;
         }
     }
 
     &__ttl--txt {
-        font-size: 20px;
+     
+        font-size: 15px;
         text-align: center;
         margin: 0 auto;
 
@@ -104,10 +145,14 @@ body {
     }
 }
 
+
+
+
 .consept {
     position: relative;
 
     &__ttl {
+        font-family: meno-banner, serif;
         font-size: 25px;
         margin: 0 auto;
         display: flex;
@@ -127,7 +172,7 @@ body {
     &__txt {
         font-weight: lighter;
         font-family: 'Klee One', cursive;
-        
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -257,7 +302,7 @@ body {
 .bg__bg0 {
     z-index: -10;
     @include position__base;
-    height: (8000px);
+    height: (9000px);
     position: absolute;
     background: #6D4739;
     // background: #962958;
@@ -302,7 +347,7 @@ body {
 .bg__bg2 {
     z-index: -8;
     @include position__base;
-    height: (8000px);
+    height: (9000px);
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/smf__grad.png);
