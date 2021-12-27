@@ -1,6 +1,7 @@
 
 body {
     cursor: crosshair;
+    @include font__meno;
 }
 
 .heading {
@@ -13,22 +14,18 @@ body {
     // font-weight: 300;
     left: 0;
     line-height: 1;
-    margin: -5vw 0 0;
-    top: 0;
     transform-origin: 50% 40%;
     white-space: nowrap;
     width: 100%;
-    z-index: 1000;
+    z-index:1000;
 
     &--down {
         bottom: 0;
-        margin-bottom: -10vw;
+        margin-bottom: -19vw;
         margin-top: 0;
         top: auto;
         transform-origin: 50% 60%;
         mix-blend-mode: overlay;
-        // animation   : scrollAnime 7s linear infinite;
-
     }
 
     @media screen and (min-width: 768px) {
@@ -42,36 +39,28 @@ body {
 }
 
 
-// @keyframes scrollAnime{
-//     0% { transform: translateX(0)}
-//   100% { transform: translateX(-100%)}
+
+
+
+
+
+// #cursor {
+//     @media screen and (min-width: 768px) {}
+//     @media screen and (min-width: 1024px) {
+//         position: fixed;
+//         // background: #fff;
+//         // border-radius:20px;
+//         // width: 10px;
+//         // height: 10px;
+//         margin: 0 auto;
+//         z-index: 7;
+//         pointer-events: none;
+//         opacity: 0;
+//     }
 // }
 
-
-
-
-#cursor {
-
-    @media screen and (min-width: 768px) {}
-
-    @media screen and (min-width: 1024px) {
-        position: fixed;
-        // background: #fff;
-        // border-radius:20px;
-        // width: 10px;
-        // height: 10px;
-        margin: 0 auto;
-        z-index: 7;
-        pointer-events: none;
-        opacity: 0;
-    }
-}
-
 #stalker {
-
-
     @media screen and (min-width: 768px) {}
-
     @media screen and (min-width: 1024px) {
         position: fixed;
         width: 200px;
@@ -80,10 +69,6 @@ body {
         margin: -50px 0 0 -50px;
         z-index: 6;
         pointer-events: none;
-        // background: rgba(255, 255, 255, 0.26);
-        // mix-blend-mode: color-dodge;
-        // border: 2px solid rgb(255, 255, 255);
-        // background-clip: padding-box; 
         background: rgba(255, 255, 255, 0.987);
         mix-blend-mode: difference;
         opacity: 0;
