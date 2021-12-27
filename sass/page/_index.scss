@@ -10,8 +10,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.165);
-    font-family: meno-banner, serif;
-    font-size: 10vw;
+    font-size: 30vw;
     // font-weight: 300;
     left: 0;
     line-height: 1;
@@ -24,11 +23,12 @@ body {
 
     &--down {
         bottom: 0;
-        margin-bottom: -5vw;
+        margin-bottom: -10vw;
         margin-top: 0;
         top: auto;
         transform-origin: 50% 60%;
         mix-blend-mode: overlay;
+        // animation   : scrollAnime 7s linear infinite;
 
     }
 
@@ -37,9 +37,16 @@ body {
     }
 
     @media screen and (min-width: 1024px) {
-        margin-bottom: -7vw;
+        margin-bottom: -13vw;
+        font-size: 20vw;
     }
 }
+
+
+// @keyframes scrollAnime{
+//     0% { transform: translateX(0)}
+//   100% { transform: translateX(-100%)}
+// }
 
 
 
@@ -85,7 +92,8 @@ body {
     width: 100%;
     margin-bottom: 280px;
     mix-blend-mode: difference;
-    color: #dce8ca8c;
+    // color: #dce8ca8c;
+    color: #a0e6368c;
 
     @media screen and (min-width: 768px) {
         height: 200vh;
@@ -130,7 +138,7 @@ body {
 
         @media screen and (min-width: 1024px) {
             font-size: 150px;
-            padding-top: 17%;
+            padding-top: 19%;
             line-height: 140px;
         }
     }
