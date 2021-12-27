@@ -1,7 +1,7 @@
 .header {
     font-family: meno-banner, serif;
     position: fixed;
-    z-index: 0;
+    z-index: 5;
     width: 100%;
     margin: 0 auto;
     padding: 15px 0;
@@ -12,8 +12,17 @@
         align-items: center;
     }
     &__ttl {
-        padding-left: 15px;
-        font-size: 20px;
+        padding-left: 10px;
+        font-size: 15px;
         color: rgb(115, 119, 119);
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 20px;
+        padding-left: 10px;
     }
 }

@@ -52,36 +52,43 @@ body {
 
 
 #cursor {
-    position: fixed;
-    // background: #fff;
-    // border-radius:20px;
-    // width: 10px;
-    // height: 10px;
-    margin: 0 auto;
-    z-index: 7;
-    pointer-events: none;
-    opacity: 0;
-}
-
-#stalker {
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    border-radius: 200px;
-    margin: -50px 0 0 -50px;
-    z-index: 6;
-    pointer-events: none;
-    // background: rgba(255, 255, 255, 0.26);
-    // mix-blend-mode: color-dodge;
-    // border: 2px solid rgb(255, 255, 255);
-    // background-clip: padding-box; 
-    background: rgba(238, 99, 99, 0.987);
-    mix-blend-mode: saturation;
-    opacity: 0;
 
     @media screen and (min-width: 768px) {}
 
-    @media screen and (min-width: 1024px) {}
+    @media screen and (min-width: 1024px) {
+        position: fixed;
+        // background: #fff;
+        // border-radius:20px;
+        // width: 10px;
+        // height: 10px;
+        margin: 0 auto;
+        z-index: 7;
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
+#stalker {
+
+
+    @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1024px) {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        margin: -50px 0 0 -50px;
+        z-index: 6;
+        pointer-events: none;
+        // background: rgba(255, 255, 255, 0.26);
+        // mix-blend-mode: color-dodge;
+        // border: 2px solid rgb(255, 255, 255);
+        // background-clip: padding-box; 
+        background: rgba(238, 99, 99, 0.987);
+        mix-blend-mode: saturation;
+        opacity: 0;
+    }
 }
 
 .mv {
@@ -90,7 +97,7 @@ body {
     position: relative;
     height: 200vh;
     width: 100%;
-    margin-bottom: 280px;
+    margin-bottom: 300px;
     mix-blend-mode: difference;
     // color: #dce8ca8c;
     color: #a0e6368c;
@@ -110,7 +117,7 @@ body {
         position: sticky;
         top: 0;
         left: 0;
-        height: 80vh;
+        height: 11vh;
         margin-bottom: 300px;
 
         @media screen and (min-width: 768px) {
@@ -126,7 +133,7 @@ body {
 
     &__ttl--catch {
 
-        padding-top: 70%;
+        padding-top: 80%;
         text-align: center;
         font-size: 40px;
         margin: 0 auto;
@@ -165,8 +172,10 @@ body {
 .consept {
     position: relative;
 
+
+
     &__ttl {
-        @include  font__meno;
+        @include font__meno;
         // font-family: meno-banner, serif;
         font-size: 25px;
         margin: 0 auto;
