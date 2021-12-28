@@ -215,12 +215,10 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
-        font-size: 150px;
-        width: 100%;
+        font-size: 100px;
         line-height: 1.125;
         z-index: 0;
         opacity: 0.1;
-
         @media screen and (min-width: 768px) {}
 
         @media screen and (min-width: 1024px) {
