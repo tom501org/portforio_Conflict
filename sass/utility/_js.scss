@@ -12,3 +12,20 @@
 .rotate-bottom{
   transform:rotate(-45deg);
 }
+
+
+
+
+
+
+.gnav {
+    transition: .3s;
+    opacity: 1;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+
+
+  .gnav.open {
+    visibility: visible;
+    opacity: 1;
+  }

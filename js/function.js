@@ -13,15 +13,15 @@ $(function(){
 $(function(){
   
   //カーソル要素の指定
-  var cursor=$("#cursor");
+  let cursor=$("#cursor");
   //ちょっと遅れてついてくるストーカー要素の指定  
-  var stalker=$("#stalker");
+  let stalker=$("#stalker");
   
   //mousemoveイベントでカーソル要素を移動させる
   $(document).on("mousemove",function(e){
     //カーソルの座標位置を取得
-    var x=e.clientX;
-    var y=e.clientY;
+    let x=e.clientX;
+    let y=e.clientY;
     //カーソル要素のcssを書き換える用
     cursor.css({
       "opacity":"1",
@@ -38,5 +38,15 @@ $(function(){
     },5);//カーソルより遅れる時間を指定
     
   });
+
+  $(document).ready(function(){
+    $('#btn').on('click',function(){
+      $('#gnav').toggleClass('open');
+      $('body').toggleClass('noscroll');
+    });
+  });
+
+
+
 });
   // --------------
