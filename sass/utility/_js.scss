@@ -1,31 +1,52 @@
-.rotate-top{
-  transform:rotate(45deg);
-
+.rotate-top {
+    transform: rotate(45deg);
 }
 
-.hide-middle{
-  opacity: 0;
-
+.hide-middle {
+    opacity: 0;
 }
 
-
-.rotate-bottom{
-  transform:rotate(-45deg);
+.rotate-bottom {
+    transform: rotate(-45deg);
 }
-
-
-
-
-
 
 .gnav {
     transition: .3s;
     opacity: 1;
     transition: opacity .6s ease, visibility .6s ease;
-  }
+}
 
-
-  .gnav.open {
+.gnav.open {
     visibility: visible;
     opacity: 1;
-  }
+}
+
+// #cursor {
+//     @media screen and (min-width: 768px) {}
+//     @media screen and (min-width: 1024px) {
+//         position: fixed;
+//         // background: #fff;
+//         // border-radius:20px;
+//         // width: 10px;
+//         // height: 10px;
+//         margin: 0 auto;
+//         z-index: 7;
+//         pointer-events: none;
+//         opacity: 0;
+//     }
+// }
+#stalker {
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        margin: -50px 0 0 -50px;
+        z-index: 6;
+        pointer-events: none;
+        background: #ffffff;
+        mix-blend-mode: difference;
+        opacity: 0;
+    }
+}
