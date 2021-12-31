@@ -7,7 +7,7 @@ $(function() {
         $('#btn__bottom').toggleClass('rotate-bottom')
         $('#gnav').slideToggle();
     })
-})
+});
 
 
 $(function() {
@@ -37,16 +37,5 @@ $(function() {
             });
         }, 5); //カーソルより遅れる時間を指定
 
-    });
-
-    $(document).ready(function() {
-        $('#btn').on('click', function() {
-            $('#gnav').toggleClass('open');
-            $('body').toggleClass('noscroll');
-        });
-    });
-
-
-
+    })
 });
-// --------------
