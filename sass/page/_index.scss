@@ -40,7 +40,7 @@ body {
     &__ttl--catch {
         padding-top: 80%;
         text-align: center;
-        font-size: 40px;
+        font-size: 44px;
         margin: 0 auto;
         overflow: hidden;
         @media screen and (min-width: 768px) {
@@ -54,7 +54,7 @@ body {
         }
     }
     &__ttl--txt {
-        font-size: 15px;
+        font-size: 16px;
         text-align: center;
         margin: 0 auto;
         @media screen and (min-width: 768px) {
@@ -69,7 +69,13 @@ body {
 .consept {
     &__box {
         position: relative;
-        margin-bottom: 300px;
+        margin-bottom: 500px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 800px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 800px;
+        }
     }
     &__ttl {
         @include font__meno;
@@ -79,13 +85,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgba(255, 255, 255, 0.618);
+        color: rgb(255, 255, 255);
         margin-bottom: 40px;
         text-align: center;
         letter-spacing: .1rem;
+        mix-blend-mode: difference;
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
-            font-size: 40px;
+            font-size: 80px;
         }
     }
     &__txt {
@@ -114,7 +121,7 @@ body {
         position: absolute;
         font-size: 80px;
         line-height: 1.125;
-        z-index: 0;
+        z-index: -1;
         opacity: 0.1;
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
@@ -122,6 +129,202 @@ body {
         }
     }
 }
+
+
+.about{
+    position: relative;
+    margin-bottom: 500px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 800px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 800px;
+    }
+    &__ttl {
+        @include font__meno;
+        // font-family: meno-banner, serif;
+        font-size: 25px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: .1rem;
+        mix-blend-mode: difference;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 80px;
+        }
+    }
+    &__txt {
+        font-weight: lighter;
+        font-family: 'Klee One', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.782);
+        font-size: 14px;
+        margin: 0 auto;
+        line-height: 34px;
+        width: 330px;
+        height: 100%;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+            width: 400px;
+        }
+    }
+
+    &__bg {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 80px;
+        line-height: 1.125;
+        z-index: -1;
+        opacity: 0.1;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 400px;
+        }
+}
+}
+
+
+
+
+
+
+.skill{
+    position: relative;
+    margin-bottom: 500px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 800px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 800px;
+        height: 100vh;
+    }
+    &__ttl {
+        @include font__meno;
+        // font-family: meno-banner, serif;
+        font-size: 25px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: .1rem;
+        mix-blend-mode: difference;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 80px;
+        }
+    }
+    &__box--icon{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    &__name{
+        font-size: 25px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(243, 64, 9);
+        margin-bottom: 40px;
+        text-align: center;
+        letter-spacing: .1rem;
+        mix-blend-mode: difference;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
+        }
+    }
+    &__box--txt{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    &__txt{
+        font-weight: lighter;
+        font-family: 'Klee One', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.782);
+        font-size: 14px;
+        margin: 0 auto;
+        line-height: 34px;
+        width: 330px;
+        height: 100%;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+            width: 400px;
+        }
+    }
+    
+
+
+
+    &__bg {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 80px;
+        line-height: 1.125;
+        z-index: -1;
+        opacity: 0.1;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 500px;
+        }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .test {
     margin: 0 auto;
