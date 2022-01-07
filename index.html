@@ -60,6 +60,7 @@
             <div class="mv__ttl">
                 <p class="mv__ttl--catch">KOUICHI<br>TOMIYAMA</p>
                 <p class="mv__ttl--txt">DESGIN ART CULTURE</p>
+                <p class="mv__ttl--txt2">+ENGINEERING</p>
             </div>
         </div>
 
@@ -68,59 +69,44 @@
         <main class="main">
 
             <canvas></canvas>
-
             <script src="./js/perlin.js"></script>
             <script>
                 let stageW = 0; // 画面の幅
                 let stageH = 0; // 画面の高さ
-
                 // canvas要素の参照を取得
                 const canvas = document.querySelector('canvas');
                 // 2Dの描画命令群を取得
                 const context = canvas.getContext('2d');
-
                 noise.seed(Math.random());
-
                 resize();
                 tick();
                 window.addEventListener('resize', resize);
-
                 /** エンターフレームのタイミングです。 */
                 function tick() {
                     requestAnimationFrame(tick);
                     const time = Date.now() / 4000;
                     draw(time);
                 }
-
-
                 /** 描画します。 */
                 function draw(time) {
                     // 画面をリセット
                     context.clearRect(0, 0, stageW, stageH);
                     context.lineWidth = 1;
-
                     const amplitude = stageH / 2; // 振幅（縦幅)の大きさ
                     const lineNum = 150; // ラインの数
                     const segmentNum = 150; // 分割数
-
                     [...Array(lineNum).keys()].forEach(j => {
                         const coefficient = 50 + j;
-
                         context.beginPath();
-
                         const h = Math.round(j / lineNum * 360); // 色相
                         const s = 100; // 彩度
                         const l = Math.round(j / lineNum * 100); // 明度
                         context.strokeStyle = `hsl(${h}, ${s}%, ${l}%)`;
-
                         [...Array(segmentNum).keys()].forEach(i => {
-
                             const x = i / (segmentNum - 1) * stageW;
-
                             const px = i / coefficient;
                             const py = (j / 50 + time);
                             const y = amplitude * noise.perlin2(px, py) + stageH / 2;
-
                             if (i === 0) {
                                 context.moveTo(x, y);
                             } else {
@@ -130,7 +116,6 @@
                         context.stroke();
                     });
                 }
-
                 /** リサイズ時のイベントです。 */
                 function resize() {
                     stageW = innerWidth * devicePixelRatio;
@@ -181,21 +166,21 @@
                 <!-- <img src="./images/art.png" alt="myphot" class="skill__img"> -->
                 <div class="skill__img"></div>
                 <div class="skill__box">
-                    <div class="skill__box--IDEA">
+                    <div class="skill__box--sub">
                         <p class="skill__name skill__name--idea">IDEA</p>
                         <p class="skill__txt fadeIn">
                             アイディアを考える方法は、前職の古着店で培った業務から着想を得ています。多種多様な衣服、世界中のブランドデザインやブランド背景から、意図と目的をくみ取り、必要な要素と不必要なこだわりを見抜くアイデア力があります。
                         </p>
                     </div>
 
-                    <div class="skill__box--DESIGN">
+                    <div class="skill__box--sub">
                         <p class="skill__name skill__name--design">DESIGN</p>
                         <p class="skill__txt fadeIn">
                             職業訓練校で学んだデザインの基礎は今まで感覚で作成してきたものの意図意匠が分かるようになり、デザインとは何かと改めて向き合える機会となりました。またコーディングのスキルの上達は数をこなすことと考え、デザインの勉強を再考し参考著書を買いデザインの奥深さと色の世界を知ることができました。
                         </p>
                     </div>
 
-                    <div class="skill__box--CODING">
+                    <div class="skill__box--sub">
                         <p class="skill__name skill__name--coding">CODING</p>
                         <p class="skill__txt fadeIn">
                             HTML5/CSS3を使いレイアウトの作成が可能です。レスポンシブデザイン、マージン間隔、検証ツールを使ったデバッグ、GITでのバージョン管理、VScodeの応用操作が可能です。JavaScript(以降JS)に関してをまだまだ知識はありませんがトライ&エラーを繰り返し何とか動作をさせています。学んでいる内に実装の楽しさを知りP5.jsやthree.jsでのクリエイティブコーディングの興味がわきました

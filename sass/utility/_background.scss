@@ -66,11 +66,11 @@
     @include position__base;
     position: absolute;
     z-index: -1;
-    height: (1080px);
+    height: (10000px);
     mix-blend-mode: darken;
     background-color: #696AA9;
     @media screen and (min-width: 768px) {
-        height: (1080px);
+        height: (10000px);
     }
     @media screen and (min-width: 1024px) {
         height: (10000px);

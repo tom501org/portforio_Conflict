@@ -59,9 +59,22 @@ body {
         margin: 0 auto;
         @media screen and (min-width: 768px) {
             font-size: 50px;
+            margin-bottom: 10px;
         }
         @media screen and (min-width: 1024px) {
             font-size: 50px;
+            margin-bottom: 10px;
+        }
+    }
+    &__ttl--txt2 {
+        font-size: 12px;
+        text-align: center;
+        margin: 0 auto;
+        @media screen and (min-width: 768px) {
+            font-size: 40px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
         }
     }
 }
@@ -69,7 +82,7 @@ body {
 .consept {
     &__box {
         position: relative;
-        margin-bottom: 700px;
+        margin-bottom: 400px;
         @media screen and (min-width: 768px) {
             margin-bottom: 800px;
         }
@@ -133,7 +146,7 @@ body {
 
 .about {
     position: relative;
-    margin-bottom: 300px;
+    margin-bottom: 180%;
     @media screen and (min-width: 768px) {
         margin-bottom: 800px;
     }
@@ -142,6 +155,7 @@ body {
     }
     &__box {
         position: relative;
+        margin-bottom: 50%;
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             left: -15%;
@@ -153,7 +167,7 @@ body {
         font-size: 50px;
         margin: 0 auto;
         color: rgb(255, 255, 255);
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         text-align: center;
         letter-spacing: .1rem;
         mix-blend-mode: difference;
@@ -183,24 +197,10 @@ body {
             width: 400px;
         }
     }
-    // &__bg {
-    //     top: 65%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     position: absolute;
-    //     font-size: 80px;
-    //     line-height: 1.125;
-    //     z-index: -1;
-    //     opacity: 0.1;
-    //     @media screen and (min-width: 768px) {}
-    //     @media screen and (min-width: 1024px) {
-    //         font-size: 400px;
-    //     }
-    // }
     &__img {
         position: absolute;
         transform: translate(-50%, -50%);
-        top: -100%;
+        top: 180%;
         left: 50%;
         object-fit: cover;
         width: 380px;
@@ -238,14 +238,12 @@ body {
         background-attachment: fixed;
         background-position: center;
         background-image: url(./../images/art.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+        background-position: 32% 100%;
+        background-color: rgb(243, 243, 243);
         z-index: -1;
         top: -10%;
         height: 120%;
         width: 100%;
-        object-fit: cover;
-        object-position: 35% 100%;
         opacity: 0.8;
         filter: invert(90%);
         @media screen and (min-width: 768px) {
@@ -256,7 +254,7 @@ body {
         @media screen and (min-width: 1024px) {
             top: -10%;
             width: 100%;
-            height: 100%;
+            height: 80%;
             opacity: 0.6;
         }
     }
@@ -272,12 +270,17 @@ body {
         text-align: center;
         letter-spacing: .1rem;
         mix-blend-mode: difference;
-        margin-bottom: 40px;
+        margin-bottom: 120px;
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             font-size: 80px;
             margin-bottom: 10px;
         }
+    }
+    &__box--sub {
+        margin-bottom: 120px;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {}
     }
     &__box {
         @media screen and (min-width: 768px) {}
@@ -308,13 +311,13 @@ body {
             font-size: 60px;
         }
         &--idea {
-            color: rgb(208, 255, 0);
+            color: rgb(255, 255, 255);
         }
         &--design {
-            color: rgb(255, 0, 212);
+            color: rgb(255, 255, 255);
         }
         &--coding {
-            color: rgb(13, 0, 255);
+            color: rgb(255, 255, 255);
         }
     }
     &__txt {
@@ -334,23 +337,6 @@ body {
             width: 400px;
         }
     }
-    // &__bg {
-    //     top: 40%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     position: absolute;
-    //     min-width: 100%;
-    //     font-size: 140px;
-    //     line-height: 1.125;
-    //     z-index: -1;
-    //     opacity: 0.1;
-    //     color: rgba(0, 0, 0, 0.433);
-    //     object-fit: cover;
-    //     @media screen and (min-width: 768px) {}
-    //     @media screen and (min-width: 1024px) {
-    //         font-size: 500px;
-    //     }
-    // }
 }
 
 .test {
