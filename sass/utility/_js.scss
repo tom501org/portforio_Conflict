@@ -43,10 +43,30 @@
         height: 200px;
         border-radius: 200px;
         margin: -50px 0 0 -50px;
-        z-index: 6;
+        z-index:1;
         pointer-events: none;
         background: #ffffff;
         mix-blend-mode: difference;
         transition: .15s;
+    
     }
 }
+
+
+
+.fadeIn {
+    opacity: 0;
+  }
+  .e-f {
+    animation: fadeIn 3s ease forwards;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    //   transform: translateY(0px);
+    }
+    100% {
+      opacity: 1;
+    //   transform: translateY(0);
+    }
+  }

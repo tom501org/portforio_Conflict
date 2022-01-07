@@ -38,6 +38,23 @@ $(function () {
                 "left": x + "px"
             });; //カーソルより遅れる時間を指定
         })
-
-
 });
+
+window.addEventListener('load', function(){
+    const observer = new IntersectionObserver(function(entries) {
+      for(let i = 0; i < entries.length; i++) {
+        if (entries[i].intersectionRatio <= 0) continue;
+        showElm(entries[i].target);
+      }
+    },{
+      rootMargin: '-10% 0% -10% 0%'
+    });
+    const elements = document.querySelectorAll('.heading,.mv__ttl,.consept__txt,.about__txt,.skill__txt');
+    for(let i = 0; i < elements.length; i++) {
+      observer.observe(elements[i]);
+    }
+    function showElm(e) {
+      e.classList.add('e-f');
+      observer.unobserve(e);
+    }
+  },false);
