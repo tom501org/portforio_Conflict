@@ -9,7 +9,7 @@
         height: (9500px);
     }
     @media screen and (min-width: 1024px) {
-        height: (9500px);
+        height: (10000px);
     }
 }
 
@@ -18,7 +18,7 @@
     position: fixed;
     transform: rotate(-50deg);
     will-change: transform;
-    // animation: rotate-anime 70s linear infinite;
+    animation: rotate-anime 70s linear infinite;
     visibility: visible;
     background: url(./../images/mv.jpg) center/cover;
     content: '';
@@ -57,15 +57,38 @@
         height: (9500px);
     }
     @media screen and (min-width: 1024px) {
-        height: (9500px);
+        height: (10000px);
         background-image: url(./../images/sai__grad.png);
     }
 }
 
+.bg__bg3{
+    @include position__base;
+    position: absolute;
+    z-index: -1;
+    height: (1080px);
+    mix-blend-mode:darken;
+    // background-image: url(./../images/verypeli.png);
+    background-color: #696AA9;
+    @media screen and (min-width: 768px) {
+        height: (1080px);
+    }
+    @media screen and (min-width: 1024px) {
+        height: (10000px);
+    }
+}
+
+
+
+
+
+
+
+
 main::before {
     position: fixed;
     will-change: transform, translate;
-    // animation: grain 12s steps(5) infinite;
+    animation: grain 12s steps(5) infinite;
     background-image: url(./../images/noise.png);
     content: '';
     height: 300%;
@@ -73,7 +96,7 @@ main::before {
     opacity: 0.3;
     top: -100%;
     width: 300%;
-    z-index: -1;
+    z-index: -2;
     @media screen and (min-width: 768px) {
         opacity: 0.8;
     }

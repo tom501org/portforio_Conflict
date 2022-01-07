@@ -35,17 +35,18 @@
 //         opacity: 0;
 //     }
 // }
-// #stalker {
-//     @media screen and (min-width: 768px) {}
-//     @media screen and (min-width: 1024px) {
-//         position: fixed;
-//         width: 200px;
-//         height: 200px;
-//         border-radius: 200px;
-//         margin: -50px 0 0 -50px;
-//         z-index: 6;
-//         pointer-events: none;
-//         background: #ffffff;
-//         mix-blend-mode: difference;
-//     }
-// }
+#stalker {
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        border-radius: 200px;
+        margin: -50px 0 0 -50px;
+        z-index: 6;
+        pointer-events: none;
+        background: #ffffff;
+        mix-blend-mode: difference;
+        transition: .15s;
+    }
+}
