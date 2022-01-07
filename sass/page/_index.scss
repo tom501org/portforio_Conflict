@@ -13,18 +13,14 @@ body {
     mix-blend-mode: difference;
     color: hsla(60, 60%, 50%, 100);
     // color: #a0e6368c;
-
-
     @media screen and (min-width: 768px) {
         height: 200vh;
         margin-bottom: 500px;
     }
-
     @media screen and (min-width: 1024px) {
         height: 200vh;
         margin-bottom: 530px;
     }
-
     &__ttl {
         // font-family: meno-banner, serif;
         position: sticky;
@@ -32,68 +28,55 @@ body {
         left: 0;
         height: 11vh;
         margin-bottom: 400px;
-
         @media screen and (min-width: 768px) {
             height: 40vh;
             margin-bottom: 500px;
         }
-
         @media screen and (min-width: 1024px) {
             height: 40vh;
             margin-bottom: 500px;
         }
     }
-
     &__ttl--catch {
         padding-top: 80%;
         text-align: center;
         font-size: 44px;
         margin: 0 auto;
         overflow: hidden;
-
         @media screen and (min-width: 768px) {
             font-size: 100px;
             padding-top: 35%;
         }
-
         @media screen and (min-width: 1024px) {
             font-size: 150px;
             padding-top: 19%;
             line-height: 140px;
         }
     }
-
     &__ttl--txt {
         font-size: 16px;
         text-align: center;
         margin: 0 auto;
-
         @media screen and (min-width: 768px) {
             font-size: 50px;
         }
-
         @media screen and (min-width: 1024px) {
             font-size: 50px;
         }
     }
 }
 
-
 .consept {
-
     &__box {
         position: relative;
         margin-bottom: 700px;
-
         @media screen and (min-width: 768px) {
             margin-bottom: 800px;
         }
-
         @media screen and (min-width: 1024px) {
             margin-bottom: 800px;
         }
     }
-
     &__ttl {
         @include font__meno;
         text-decoration: underline solid rgb(255, 255, 255) 1px;
@@ -107,15 +90,12 @@ body {
         text-align: center;
         letter-spacing: .1rem;
         mix-blend-mode: difference;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 80px;
             margin-bottom: 80px;
         }
     }
-
     &__txt {
         font-weight: lighter;
         font-family: 'Klee One', cursive;
@@ -129,15 +109,12 @@ body {
         line-height: 34px;
         width: 330px;
         height: 100%;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 18px;
             width: 400px;
         }
     }
-
     // &__bg {
     //     top: 50%;
     //     left: 50%;
@@ -147,40 +124,29 @@ body {
     //     line-height: 1.125;
     //     z-index: -1;
     //     opacity: 0.1;
-
     //     @media screen and (min-width: 768px) {}
-
     //     @media screen and (min-width: 1024px) {
     //         font-size: 300px;
     //     }
     // }
 }
 
-
 .about {
     position: relative;
     margin-bottom: 300px;
-
-
     @media screen and (min-width: 768px) {
         margin-bottom: 800px;
     }
-
     @media screen and (min-width: 1024px) {
         margin-bottom: 800px;
-
     }
-
     &__box {
         position: relative;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             left: -15%;
         }
     }
-
     &__ttl {
         @include font__meno;
         text-decoration: underline solid rgb(255, 255, 255) 1px;
@@ -191,16 +157,13 @@ body {
         text-align: center;
         letter-spacing: .1rem;
         mix-blend-mode: difference;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             margin: 0 auto;
             font-size: 80px;
             margin-bottom: 40px;
         }
     }
-
     &__txt {
         font-weight: lighter;
         font-family: 'Klee One', cursive;
@@ -214,17 +177,13 @@ body {
         line-height: 34px;
         width: 330px;
         height: 100%;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 18px;
             width: 400px;
         }
     }
-
     // &__bg {
-
     //     top: 65%;
     //     left: 50%;
     //     transform: translate(-50%, -50%);
@@ -233,15 +192,11 @@ body {
     //     line-height: 1.125;
     //     z-index: -1;
     //     opacity: 0.1;
-
-
     //     @media screen and (min-width: 768px) {}
-
     //     @media screen and (min-width: 1024px) {
     //         font-size: 400px;
     //     }
     // }
-
     &__img {
         position: absolute;
         transform: translate(-50%, -50%);
@@ -251,14 +206,12 @@ body {
         width: 380px;
         filter: grayscale(100%);
         opacity: 0.8;
-
         @media screen and (min-width: 768px) {
             position: absolute;
             top: 50%;
             left: 70%;
             transform: translate(-50%, -50%);
         }
-
         @media screen and (min-width: 1024px) {
             position: absolute;
             top: 50%;
@@ -267,31 +220,26 @@ body {
             object-fit: cover;
             width: 700px;
         }
-
     }
 }
-
-
-
-
-
 
 .skill {
     position: relative;
     margin-bottom: 500px;
-
     @media screen and (min-width: 768px) {
         margin-bottom: 800px;
     }
-
     @media screen and (min-width: 1024px) {
         margin-bottom: 800px;
         height: 100vh;
     }
-
     &__img {
-
         position: absolute;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url(./../images/art.png);
+        background-size: cover;
+        background-repeat: no-repeat;
         z-index: -1;
         top: -10%;
         height: 120%;
@@ -299,23 +247,19 @@ body {
         object-fit: cover;
         object-position: 35% 100%;
         opacity: 0.8;
-        filter: drop-shadow(16px 16px 20px red) invert(75%);
-
+        filter: invert(90%);
         @media screen and (min-width: 768px) {
             top: -10%;
             width: 100%;
             height: 100%;
         }
-
         @media screen and (min-width: 1024px) {
             top: -10%;
             width: 100%;
             height: 100%;
             opacity: 0.6;
-
         }
     }
-
     &__ttl {
         @include font__meno;
         text-decoration: underline solid rgb(255, 255, 255) 1px;
@@ -329,18 +273,14 @@ body {
         letter-spacing: .1rem;
         mix-blend-mode: difference;
         margin-bottom: 40px;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 80px;
             margin-bottom: 10px;
         }
     }
-
     &__box {
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             padding-top: 8%;
             max-width: 80%;
@@ -352,7 +292,6 @@ body {
             width: 100%;
         }
     }
-
     &__name {
         font-size: 35px;
         margin: 0 auto;
@@ -364,30 +303,23 @@ body {
         text-align: center;
         letter-spacing: .1rem;
         mix-blend-mode: difference;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 60px;
         }
-
         &--idea {
             color: rgb(208, 255, 0);
         }
-
         &--design {
             color: rgb(255, 0, 212);
         }
-
         &--coding {
             color: rgb(13, 0, 255);
         }
     }
-
     &__txt {
         font-weight: lighter;
         font-family: 'Klee One', cursive;
-
         text-align: center;
         color: rgba(255, 255, 255, 0.782);
         font-size: 14px;
@@ -396,18 +328,12 @@ body {
         line-height: 34px;
         width: 330px;
         height: 100%;
-
         @media screen and (min-width: 768px) {}
-
         @media screen and (min-width: 1024px) {
             font-size: 18px;
             width: 400px;
         }
     }
-
-
-
-
     // &__bg {
     //     top: 40%;
     //     left: 50%;
@@ -420,48 +346,12 @@ body {
     //     opacity: 0.1;
     //     color: rgba(0, 0, 0, 0.433);
     //     object-fit: cover;
-
     //     @media screen and (min-width: 768px) {}
-
     //     @media screen and (min-width: 1024px) {
     //         font-size: 500px;
     //     }
     // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .test {
     margin: 0 auto;

@@ -62,12 +62,12 @@
     }
 }
 
-.bg__bg3{
+.bg__bg3 {
     @include position__base;
     position: absolute;
     z-index: -1;
     height: (1080px);
-    mix-blend-mode:darken;
+    mix-blend-mode: darken;
     background-color: #696AA9;
     @media screen and (min-width: 768px) {
         height: (1080px);
@@ -76,13 +76,6 @@
         height: (10000px);
     }
 }
-
-
-
-
-
-
-
 
 main::before {
     position: fixed;
@@ -170,3 +163,10 @@ main::before {
 //         font-size: 10vw;
 //     }
 // }
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(163, 17, 17, 0);
+    opacity: 0.2;
+}

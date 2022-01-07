@@ -66,6 +66,80 @@
 
 
         <main class="main">
+
+            <canvas></canvas>
+
+            <script src="./js/perlin.js"></script>
+            <script>
+                let stageW = 0; // 画面の幅
+                let stageH = 0; // 画面の高さ
+
+                // canvas要素の参照を取得
+                const canvas = document.querySelector('canvas');
+                // 2Dの描画命令群を取得
+                const context = canvas.getContext('2d');
+
+                noise.seed(Math.random());
+
+                resize();
+                tick();
+                window.addEventListener('resize', resize);
+
+                /** エンターフレームのタイミングです。 */
+                function tick() {
+                    requestAnimationFrame(tick);
+                    const time = Date.now() / 4000;
+                    draw(time);
+                }
+
+
+                /** 描画します。 */
+                function draw(time) {
+                    // 画面をリセット
+                    context.clearRect(0, 0, stageW, stageH);
+                    context.lineWidth = 1;
+
+                    const amplitude = stageH / 2; // 振幅（縦幅)の大きさ
+                    const lineNum = 150; // ラインの数
+                    const segmentNum = 150; // 分割数
+
+                    [...Array(lineNum).keys()].forEach(j => {
+                        const coefficient = 50 + j;
+
+                        context.beginPath();
+
+                        const h = Math.round(j / lineNum * 360); // 色相
+                        const s = 100; // 彩度
+                        const l = Math.round(j / lineNum * 100); // 明度
+                        context.strokeStyle = `hsl(${h}, ${s}%, ${l}%)`;
+
+                        [...Array(segmentNum).keys()].forEach(i => {
+
+                            const x = i / (segmentNum - 1) * stageW;
+
+                            const px = i / coefficient;
+                            const py = (j / 50 + time);
+                            const y = amplitude * noise.perlin2(px, py) + stageH / 2;
+
+                            if (i === 0) {
+                                context.moveTo(x, y);
+                            } else {
+                                context.lineTo(x, y);
+                            }
+                        });
+                        context.stroke();
+                    });
+                }
+
+                /** リサイズ時のイベントです。 */
+                function resize() {
+                    stageW = innerWidth * devicePixelRatio;
+                    stageH = innerHeight * devicePixelRatio;
+
+                    canvas.width = stageW;
+                    canvas.height = stageH;
+                }
+            </script>
             <section class="conseppt">
                 <div class="consept__box">
                     <h1 class="consept__ttl">CONSEPT</h1>
@@ -104,7 +178,8 @@
             <section class="skill">
                 <h1 class="skill__ttl">SKILL</h1>
                 <!-- <div class="skill__bg">SKILL</div> -->
-                <img src="./images/art.png" alt="myphot" class="skill__img">
+                <!-- <img src="./images/art.png" alt="myphot" class="skill__img"> -->
+                <div class="skill__img"></div>
                 <div class="skill__box">
                     <div class="skill__box--IDEA">
                         <p class="skill__name skill__name--idea">IDEA</p>
@@ -116,7 +191,7 @@
                     <div class="skill__box--DESIGN">
                         <p class="skill__name skill__name--design">DESIGN</p>
                         <p class="skill__txt fadeIn">
-                            職業訓練校で学んだデザインの基礎は今まで感覚で作成してきたものの意図意匠が分かるようになり、デザインとは何かと改めて向き合える機会となりました。またコーディングのスキルの上達は数をこなすことと考え、デザインの勉強を再考し参考著書を買いデザインの奥深さと色の世界を知ることができました。 
+                            職業訓練校で学んだデザインの基礎は今まで感覚で作成してきたものの意図意匠が分かるようになり、デザインとは何かと改めて向き合える機会となりました。またコーディングのスキルの上達は数をこなすことと考え、デザインの勉強を再考し参考著書を買いデザインの奥深さと色の世界を知ることができました。
                         </p>
                     </div>
 
@@ -149,26 +224,21 @@
             <section class="contact">
                 <h2 class="contact__ttl">CONTACT</h2>
 
-                <form
-                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse"
-                    id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse" id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
                     <div class="form__name">
                         <label for="name" class="form__label">NAME</label>
-                        <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="マキタ モトキ"
-                            required>
+                        <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="マキタ モトキ" required>
                     </div>
 
                     <div class="form__email">
                         <label for="email" class="form__label">MAIL</label>
-                        <input id="email" type="email" name="entry.1158593220" class="form__input"
-                            placeholder="exampl@gmail.com" required>
+                        <input id="email" type="email" name="entry.1158593220" class="form__input" placeholder="exampl@gmail.com" required>
                     </div>
 
                     <div class="form__message">
                         <label for="message" class="form__label">MESSAGE</label>
-                        <textarea class="form__textarea" name="entry.1280718811" id="message"
-                            placeholder="お問い合わせ内容を入力してください" required></textarea>
+                        <textarea class="form__textarea" name="entry.1280718811" id="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
                     </div>
 
                     <div class="form__btn">
@@ -197,8 +267,7 @@
         var submitted = false;
     </script>
 
-    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
-        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>
