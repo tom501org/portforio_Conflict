@@ -47,9 +47,9 @@ window.addEventListener('load', function(){
         showElm(entries[i].target);
       }
     },{
-      rootMargin: '-10% 0% -10% 0%'
+      rootMargin: '-20% 0% -20% 0%'
     });
-    const elements = document.querySelectorAll('.heading,.mv__ttl,.consept__txt,.about__txt,.skill__txt');
+    const elements = document.querySelectorAll('.mv__ttl,.fadeIn');
     for(let i = 0; i < elements.length; i++) {
       observer.observe(elements[i]);
     }
