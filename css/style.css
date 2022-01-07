@@ -465,7 +465,9 @@ body {
   font-family: meno-banner, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
+  -webkit-text-decoration: underline solid white 1px;
+          text-decoration: underline solid white 1px;
+  font-size: 50px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -485,6 +487,7 @@ body {
 @media screen and (min-width: 1024px) {
   .consept__ttl {
     font-size: 80px;
+    margin-bottom: 80px;
   }
 }
 .consept__txt {
@@ -511,22 +514,6 @@ body {
   .consept__txt {
     font-size: 18px;
     width: 400px;
-  }
-}
-.consept__bg {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  font-size: 80px;
-  line-height: 1.125;
-  z-index: -1;
-  opacity: 0.1;
-}
-@media screen and (min-width: 1024px) {
-  .consept__bg {
-    font-size: 300px;
   }
 }
 
@@ -556,7 +543,9 @@ body {
   font-family: meno-banner, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
+  -webkit-text-decoration: underline solid white 1px;
+          text-decoration: underline solid white 1px;
+  font-size: 50px;
   margin: 0 auto;
   color: white;
   margin-bottom: 20px;
@@ -568,7 +557,7 @@ body {
   .about__ttl {
     margin: 0 auto;
     font-size: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 }
 .about__txt {
@@ -595,22 +584,6 @@ body {
   .about__txt {
     font-size: 18px;
     width: 400px;
-  }
-}
-.about__bg {
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  font-size: 80px;
-  line-height: 1.125;
-  z-index: -1;
-  opacity: 0.1;
-}
-@media screen and (min-width: 1024px) {
-  .about__bg {
-    font-size: 400px;
   }
 }
 .about__img {
@@ -666,11 +639,16 @@ body {
 .skill__img {
   position: absolute;
   z-index: -1;
-  height: 100%;
+  top: -10%;
+  height: 120%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.5;
+  -o-object-position: 35% 100%;
+     object-position: 35% 100%;
+  opacity: 0.8;
+  -webkit-filter: drop-shadow(16px 16px 20px red) invert(75%);
+          filter: drop-shadow(16px 16px 20px red) invert(75%);
 }
 @media screen and (min-width: 768px) {
   .skill__img {
@@ -691,7 +669,9 @@ body {
   font-family: meno-banner, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
+  -webkit-text-decoration: underline solid white 1px;
+          text-decoration: underline solid white 1px;
+  font-size: 50px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -711,10 +691,12 @@ body {
 @media screen and (min-width: 1024px) {
   .skill__ttl {
     font-size: 80px;
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1024px) {
   .skill__box {
+    padding-top: 8%;
     max-width: 80%;
     font-size: 40px;
     margin: 0 auto;
@@ -729,7 +711,7 @@ body {
   }
 }
 .skill__name {
-  font-size: 20px;
+  font-size: 35px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -748,8 +730,17 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .skill__name {
-    font-size: 40px;
+    font-size: 60px;
   }
+}
+.skill__name--idea {
+  color: #d0ff00;
+}
+.skill__name--design {
+  color: #ff00d4;
+}
+.skill__name--coding {
+  color: #0d00ff;
 }
 .skill__txt {
   font-weight: lighter;
