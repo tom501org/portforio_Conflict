@@ -449,7 +449,7 @@ body {
 
 .consept__box {
   position: relative;
-  margin-bottom: 500px;
+  margin-bottom: 700px;
 }
 @media screen and (min-width: 768px) {
   .consept__box {
@@ -801,6 +801,8 @@ body {
   -webkit-transform: rotate(-50deg);
           transform: rotate(-50deg);
   will-change: transform;
+  -webkit-animation: rotate-anime 70s linear infinite;
+          animation: rotate-anime 70s linear infinite;
   visibility: visible;
   background: url(./../images/mv.jpg) center/cover;
   content: "";
@@ -890,6 +892,8 @@ body {
 main::before {
   position: fixed;
   will-change: transform, translate;
+  -webkit-animation: grain 12s steps(5) infinite;
+          animation: grain 12s steps(5) infinite;
   background-image: url(./../images/noise.png);
   content: "";
   height: 300%;

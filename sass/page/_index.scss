@@ -80,9 +80,10 @@ body {
 
 
 .consept {
+
     &__box {
         position: relative;
-        margin-bottom: 500px;
+        margin-bottom: 700px;
 
         @media screen and (min-width: 768px) {
             margin-bottom: 800px;
