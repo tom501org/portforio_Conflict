@@ -1,15 +1,15 @@
 .bg__bg0 {
     z-index: -10;
     @include position__base;
-    height: (9000px);
+    height: (8500px);
     position: absolute;
     background: #6D4739;
     // background: #962958;
     @media screen and (min-width: 768px) {
-        height: (9500px);
+        height: (8700px);
     }
     @media screen and (min-width: 1024px) {
-        height: (10000px);
+        height: (8800px);
     }
 }
 
@@ -49,15 +49,15 @@
 .bg__bg2 {
     z-index: -8;
     @include position__base;
-    height: (9000px);
+    height: (8500px);
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/smf__grad.png);
     @media screen and (min-width: 768px) {
-        height: (9500px);
+        height: (8700px);
     }
     @media screen and (min-width: 1024px) {
-        height: (10000px);
+        height: (8800px);
         background-image: url(./../images/sai__grad.png);
     }
 }
@@ -66,14 +66,14 @@
     @include position__base;
     position: absolute;
     z-index: -1;
-    height: (10000px);
+    height: (8500px);
     mix-blend-mode: darken;
     background-color: #696AA9;
     @media screen and (min-width: 768px) {
-        height: (10000px);
+        height: (8700px);
     }
     @media screen and (min-width: 1024px) {
-        height: (10000px);
+        height: (8800px);
     }
 }
 

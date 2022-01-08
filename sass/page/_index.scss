@@ -128,20 +128,6 @@ body {
             width: 400px;
         }
     }
-    // &__bg {
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     position: absolute;
-    //     font-size: 80px;
-    //     line-height: 1.125;
-    //     z-index: -1;
-    //     opacity: 0.1;
-    //     @media screen and (min-width: 768px) {}
-    //     @media screen and (min-width: 1024px) {
-    //         font-size: 300px;
-    //     }
-    // }
 }
 
 .about {
@@ -227,10 +213,10 @@ body {
     position: relative;
     margin-bottom: 500px;
     @media screen and (min-width: 768px) {
-        margin-bottom: 800px;
+        margin-bottom: 600px;
     }
     @media screen and (min-width: 1024px) {
-        margin-bottom: 800px;
+        margin-bottom: 400px;
         height: 100vh;
     }
     &__img {
@@ -254,8 +240,8 @@ body {
         @media screen and (min-width: 1024px) {
             top: -10%;
             width: 100%;
-            height: 80%;
-            opacity: 0.6;
+            height: 90%;
+            opacity: 0.4;
         }
     }
     &__ttl {
@@ -274,7 +260,7 @@ body {
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             font-size: 80px;
-            margin-bottom: 10px;
+            margin-bottom: 120px;
         }
     }
     &__box--sub {
@@ -285,7 +271,7 @@ body {
     &__box {
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
-            padding-top: 8%;
+            // padding-top: 8%;
             max-width: 80%;
             font-size: 40px;
             margin: 0 auto;
@@ -339,13 +325,99 @@ body {
     }
 }
 
-.test {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    mix-blend-mode: overlay;
-    color: #8279b6;
-    margin-bottom: 100px;
-    height: 100vh;
-    // background: rgb(0, 0, 0);
+.work {
+    position: relative;
+    margin-bottom: 300px;
+    width: 100%;
+    @media screen and (min-width: 768px) {}
+    margin-bottom: 600px;
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 50px;
+        height: 130vh;
+    }
+    &__img {
+        position: absolute;
+        background-attachment: fixed;
+        background-position: center;
+        // background-image: url(./../images/art.png);
+        background-position: 32% 100%;
+        background-color: rgb(19, 82, 80);
+        z-index: -1;
+        top: -10%;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+        filter: inherit(80%);
+        // mix-blend-mode: darken;
+        @media screen and (min-width: 768px) {
+            top: -10%;
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (min-width: 1024px) {
+            top: -10%;
+            width: 100%;
+            height: 90%;
+            opacity: 0.4;
+        }
+    }
+    &__ttl {
+        @include font__meno;
+        text-decoration: underline solid rgb(255, 255, 255) 1px;
+        font-size: 50px;
+        margin: 0 auto;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        letter-spacing: .1rem;
+        mix-blend-mode: difference;
+        margin-bottom: 120px;
+        @media screen and (min-width: 768px) {}
+        @media screen and (min-width: 1024px) {
+            font-size: 80px;
+            margin-bottom: 120px;
+        }
+    }
+    &__container--one {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 100px;
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 100px;
+            margin-bottom: 30px;
+        }
+    }
+    &__container--two {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 100px;
+        }
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            gap: 100px;
+            // margin-bottom: 100px;
+        }
+    }
+    &__pic {
+        width: 100%;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 500px;
+        }
+    }
+    &__box {
+        margin-bottom: 50px;
+    }
 }
