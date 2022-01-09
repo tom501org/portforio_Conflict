@@ -132,7 +132,8 @@ body {
 
 .about {
     position: relative;
-    margin-bottom: 180%;
+    height: 100%;
+    width: 100%;
     @media screen and (min-width: 768px) {
         margin-bottom: 800px;
     }
@@ -141,11 +142,8 @@ body {
     }
     &__box {
         position: relative;
-        margin-bottom: 50%;
         @media screen and (min-width: 768px) {}
-        @media screen and (min-width: 1024px) {
-            left: -15%;
-        }
+        @media screen and (min-width: 1024px) {}
     }
     &__ttl {
         @include font__meno;
@@ -163,6 +161,12 @@ body {
             font-size: 80px;
             margin-bottom: 40px;
         }
+    }
+    &__ttl--myname {
+        font-family: 'Klee One', cursive;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        text-align: center;
     }
     &__txt {
         font-weight: lighter;
@@ -184,27 +188,13 @@ body {
         }
     }
     &__img {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 180%;
-        left: 50%;
         object-fit: cover;
         width: 380px;
         filter: grayscale(100%);
         opacity: 0.8;
-        @media screen and (min-width: 768px) {
-            position: absolute;
-            top: 50%;
-            left: 70%;
-            transform: translate(-50%, -50%);
-        }
+        @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
-            position: absolute;
-            top: 50%;
-            left: 70%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            width: 700px;
+            width: 500px;
         }
     }
 }

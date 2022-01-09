@@ -77,26 +77,25 @@
     }
 }
 
-main::before {
-    position: fixed;
-    will-change: transform, translate;
-    animation: grain 12s steps(5) infinite;
-    background-image: url(./../images/noise.png);
-    content: '';
-    height: 300%;
-    left: -50%;
-    opacity: 0.3;
-    top: -100%;
-    width: 300%;
-    z-index: -2;
-    @media screen and (min-width: 768px) {
-        opacity: 0.8;
-    }
-    @media screen and (min-width: 1024px) {
-        opacity: 0.6;
-    }
-}
-
+// main::before {
+//     position: fixed;
+//     will-change: transform, translate;
+//     animation: grain 12s steps(5) infinite;
+//     background-image: url(./../images/noise.png);
+//     content: '';
+//     height: 300%;
+//     left: -50%;
+//     opacity: 0.3;
+//     top: -100%;
+//     width: 300%;
+//     z-index: -2;
+//     @media screen and (min-width: 768px) {
+//         opacity: 0.8;
+//     }
+//     @media screen and (min-width: 1024px) {
+//         opacity: 0.6;
+//     }
+// }
 @keyframes grain {
     0%,
     100% {
@@ -166,7 +165,7 @@ main::before {
 canvas {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(163, 17, 17, 0);
     opacity: 0.2;
 }
