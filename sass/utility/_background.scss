@@ -6,10 +6,10 @@
     background: #6D4739;
     // background: #962958;
     @media screen and (min-width: 768px) {
-        height: (8700px);
+        height: (8000px);
     }
     @media screen and (min-width: 1024px) {
-        height: (8800px);
+        height: (8300px);
     }
 }
 
@@ -54,10 +54,10 @@
     mix-blend-mode: difference;
     background-image: url(./../images/smf__grad.png);
     @media screen and (min-width: 768px) {
-        height: (8700px);
+        height: (8000px);
     }
     @media screen and (min-width: 1024px) {
-        height: (8800px);
+        height: (8300px);
         background-image: url(./../images/sai__grad.png);
     }
 }
@@ -70,32 +70,33 @@
     mix-blend-mode: darken;
     background-color: #696AA9;
     @media screen and (min-width: 768px) {
-        height: (8700px);
+        height: (8000px);
     }
     @media screen and (min-width: 1024px) {
-        height: (8800px);
+        height: (8300px);
     }
 }
 
-// main::before {
-//     position: fixed;
-//     will-change: transform, translate;
-//     animation: grain 12s steps(5) infinite;
-//     background-image: url(./../images/noise.png);
-//     content: '';
-//     height: 300%;
-//     left: -50%;
-//     opacity: 0.3;
-//     top: -100%;
-//     width: 300%;
-//     z-index: -2;
-//     @media screen and (min-width: 768px) {
-//         opacity: 0.8;
-//     }
-//     @media screen and (min-width: 1024px) {
-//         opacity: 0.6;
-//     }
-// }
+main::before {
+    position: fixed;
+    will-change: transform, translate;
+    animation: grain 12s steps(5) infinite;
+    background-image: url(./../images/noise.png);
+    content: '';
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    top: -100%;
+    width: 300%;
+    z-index: -2;
+    @media screen and (min-width: 768px) {
+        opacity: 0.8;
+    }
+    @media screen and (min-width: 1024px) {
+        opacity: 0.6;
+    }
+}
+
 @keyframes grain {
     0%,
     100% {
