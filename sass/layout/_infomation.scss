@@ -1,10 +1,19 @@
 .contact__ttl {
-    position: relative;
-    z-index: 2;
+    @include font__meno;
+    text-decoration: underline solid rgb(255, 255, 255) 1px;
     font-size: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
     text-align: center;
-    color: rgb(218, 59, 59);
+    letter-spacing: .1rem;
     mix-blend-mode: difference;
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        font-size: 80px;
+    }
 }
 
 .form {
@@ -38,7 +47,7 @@
         width: 100%;
         display: block;
         padding: 20px 0;
-        color: #6f5140;
+        color: #ffffff;
         font-size: 20px;
     }
     &__input {
