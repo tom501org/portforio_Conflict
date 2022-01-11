@@ -1,10 +1,17 @@
+.loop {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(163, 17, 17, 0);
+    opacity: 0.2;
+}
+
 .bg__bg0 {
     z-index: -10;
     @include position__base;
     height: (8500px);
     position: absolute;
     background: #6D4739;
-    // background: #962958;
     @media screen and (min-width: 768px) {
         height: (8000px);
     }
@@ -37,14 +44,7 @@
     }
 }
 
-@keyframes rotate-anime {
-    0% {
-        transform: rotate(-50deg);
-    }
-    100% {
-        transform: rotate(-410deg);
-    }
-}
+
 
 .bg__bg2 {
     z-index: -8;
@@ -94,6 +94,16 @@ main::before {
     }
     @media screen and (min-width: 1024px) {
         opacity: 0.6;
+    }
+}
+
+
+@keyframes rotate-anime {
+    0% {
+        transform: rotate(-50deg);
+    }
+    100% {
+        transform: rotate(-410deg);
     }
 }
 

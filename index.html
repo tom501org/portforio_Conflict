@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/rmq1suw.css">
 
 </head>
-<!-- <h2 class="heading--down">KOUICHITOMIYAMA</h2> -->
 <span class="bg__bg0"></span>
 <span class="bg__bg1"></span>
 <span class="bg__bg2"></span>
@@ -28,13 +27,6 @@
     <div class="loading js-loading">
         <p class="spinner"></p>
     </div>
-
-
-
-
-
-    <div id="cursor"></div>
-    <div id="stalker"></div>
 
     <div class="wrapper">
 
@@ -71,70 +63,14 @@
 
 
         <main class="main">
-            <canvas></canvas>
-            <script src="./js/perlin.js"></script>
-            <script>
-                let stageW = 0; // 画面の幅
-                let stageH = 0; // 画面の高さ
-                // canvas要素の参照を取得
-                const canvas = document.querySelector('canvas');
-                // 2Dの描画命令群を取得
-                const context = canvas.getContext('2d');
-                noise.seed(Math.random());
-                resize();
-                tick();
-                window.addEventListener('resize', resize);
-                /** エンターフレームのタイミングです。 */
-                function tick() {
-                    requestAnimationFrame(tick);
-                    const time = Date.now() / 4000;
-                    draw(time);
-                }
-                /** 描画します。 */
-                function draw(time) {
-                    // 画面をリセット
-                    context.clearRect(0, 0, stageW, stageH);
-                    context.lineWidth = 1;
-                    const amplitude = stageH / 2; // 振幅（縦幅)の大きさ
-                    const lineNum = 150; // ラインの数
-                    const segmentNum = 150; // 分割数
-                    [...Array(lineNum).keys()].forEach(j => {
-                        const coefficient = 50 + j;
-                        context.beginPath();
-                        const h = Math.round(j / lineNum * 360); // 色相
-                        const s = 100; // 彩度
-                        const l = Math.round(j / lineNum * 100); // 明度
-                        context.strokeStyle = `hsl(${h}, ${s}%, ${l}%)`;
-                        [...Array(segmentNum).keys()].forEach(i => {
-                            const x = i / (segmentNum - 1) * stageW;
-                            const px = i / coefficient;
-                            const py = (j / 50 + time);
-                            const y = amplitude * noise.perlin2(px, py) + stageH / 2;
-                            if (i === 0) {
-                                context.moveTo(x, y);
-                            } else {
-                                context.lineTo(x, y);
-                            }
-                        });
-                        context.stroke();
-                    });
-                }
-                /** リサイズ時のイベントです。 */
-                function resize() {
-                    stageW = innerWidth * devicePixelRatio;
-                    stageH = innerHeight * devicePixelRatio;
 
-                    canvas.width = stageW;
-                    canvas.height = stageH;
-                }
-            </script>
-
-
-
+            <canvas class="loop">
+                <script src="./js/perlin.js"></script>
+            </canvas>
 
             <section class="conseppt">
+                <h1 class="consept__ttl">CONSEPT</h1>
                 <div class="consept__box">
-                    <h1 class="consept__ttl">CONSEPT</h1>
                     <p class="consept__txt fadeIn">
                         私の好きな言葉 "夢"を <br> コンセプトにデザインを作成しました。
                         <br> 夢の意味には二つの意味があります。
@@ -161,7 +97,6 @@
                             私はほかもしその詐欺がかりという事の時でしでしな。当然には起るたなだです。私はほかもしその詐欺がかりという事の時でしでしな。むしろ今が断食人も何だかその挨拶たでしょほどに救うてしまいたがも相違申しだなて、当然には起るたなだです。
                         </p>
                     </div>
-                    <!-- <p class="about__pic"> <img src="./images/about2.jpg" alt="myphot" class="about__img"></p> -->
                 </div>
             </section>
 
@@ -172,21 +107,23 @@
                 <div class="skill__img"></div>
                 <div class="skill__box">
                     <div class="skill__box--sub">
-                        <p class="skill__name skill__name--idea">IDEA</p>
+                        <p class="skill__name">IDEA</p>
                         <p class="skill__txt fadeIn">
-                            アイデアを考える方法は、前職の古物店で培った業務から着想を得ています。 時代を超えた世界中の衣服、デザイン、ブランドとの出会いにより意図と意匠をくみ取り、必要な要素と不必要なこだわりを見抜くアイデアの一部となりました。制作する際は実際に出会った人をペルソナとし、考えをまとめています。 人への感謝を込めることが自分のアイデアの礎として保持したい価値観です。
+                            アイデアを考える方法は、前職の古物店で培った業務から着想を得ています。
+                            時代を超えた世界中の衣服、デザイン、ブランドとの出会いにより意図と意匠をくみ取り、必要な要素と不必要なこだわりを見抜くアイデアの一部となりました。制作する際は実際に出会った人をペルソナとし、考えをまとめています。
+                            人への感謝を込めることが自分のアイデアの礎として保持したい価値観です。
                         </p>
                     </div>
 
                     <div class="skill__box--sub">
-                        <p class="skill__name skill__name--design">DESIGN</p>
+                        <p class="skill__name">DESIGN</p>
                         <p class="skill__txt fadeIn">
                             職業訓練校で学んだデザインの基礎は今まで感覚で作成してきたものの意図や原理が分かるようになり、デザインとアートの違いを知ることができました。グループ制作の中でWEB制作には、コーディングとデザインの知識のバランスが必要であると考え、デザインの勉強も行い、人間心理、デザイン構成、色知識を独学しています。外出時は色、形、文字を観察するよう心がけてます。
                         </p>
                     </div>
 
                     <div class="skill__box--sub">
-                        <p class="skill__name skill__name--coding">CODING</p>
+                        <p class="skill__name">CODING</p>
                         <p class="skill__txt fadeIn">
                             HTML5/CSS3(Sass)/jQueryを使いレイアウトの作成、中でもビジュアル表現を得意としています。レスポンシブデザイン、マージン調整、検証ツールを使ったデバッグ、GITでのバージョン管理、VScodeの応用操作が可能です。JavaScriptに関してはまだまだ知識はありませんが、まずは読めるようにとサンプルコードを探しテスト実装し、挙動の変化を楽しみながら学んでいます。
                         </p>
@@ -199,24 +136,24 @@
                 <div class="work__img"></div>
                 <div class="work__container--one fadeIn">
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (1).jpg" alt="">
+                        <img class="work__pic" src="./images/work (1).jpg" alt="ポートフォリオ">
                     </div>
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (2).jpg" alt="">
+                        <img class="work__pic" src="./images/work (2).jpg" alt="ポートフォリオ">
                     </div>
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (3).jpg" alt="">
+                        <img class="work__pic" src="./images/work (3).jpg" alt="ポートフォリオ">
                     </div>
                 </div>
                 <div class="work__container--two fadeIn">
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (4).jpg" alt="">
+                        <img class="work__pic" src="./images/work (4).jpg" alt="ポートフォリオ">
                     </div>
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (5).jpg" alt="">
+                        <img class="work__pic" src="./images/work (5).jpg" alt="ポートフォリオ">
                     </div>
                     <div class="work__box">
-                        <img class="work__pic" src="./images/work (6).jpg" alt="">
+                        <img class="work__pic" src="./images/work (6).jpg" alt="ポートフォリオ">
                     </div>
                 </div>
 
@@ -228,21 +165,25 @@
     <section class="contact">
         <h2 class="contact__ttl">CONTACT</h2>
 
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse" id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse"
+            id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
             <div class="form__name">
                 <label for="name" class="form__label">NAME</label>
-                <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="マキタ モトキ" required>
+                <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="タナカ　タロウ" required>
             </div>
 
             <div class="form__email">
                 <label for="email" class="form__label">MAIL</label>
-                <input id="email" type="email" name="entry.1158593220" class="form__input" placeholder="exampl@gmail.com" required>
+                <input id="email" type="email" name="entry.1158593220" class="form__input"
+                    placeholder="exampl@gmail.com" required>
             </div>
 
             <div class="form__message">
                 <label for="message" class="form__label">MESSAGE</label>
-                <textarea class="form__textarea" name="entry.1280718811" id="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
+                <textarea class="form__textarea" name="entry.1280718811" id="message" placeholder="お問い合わせ内容を入力してください"
+                    required></textarea>
             </div>
 
             <div class="form__btn">
@@ -263,10 +204,13 @@
         var submitted = false;
     </script>
 
-    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>
+    <script src="js/waving.js"></script>
+
 
 </body>
 

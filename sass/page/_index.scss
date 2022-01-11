@@ -1,14 +1,7 @@
 body {
     cursor: crosshair;
     @include font__meno;
-    overflow-y: visible;
 }
-
-
-  
-
-
-
 
 .mv {
     @include font__meno;
@@ -19,7 +12,6 @@ body {
     margin-bottom: 300px;
     mix-blend-mode: difference;
     color: hsla(60, 60%, 50%, 100);
-    // color: #a0e6368c;
     @media screen and (min-width: 768px) {
         height: 200vh;
         margin-bottom: 500px;
@@ -86,13 +78,6 @@ body {
 }
 
 
-canvas {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgba(163, 17, 17, 0);
-    opacity: 0.2;
-}
 
 
 
@@ -341,15 +326,6 @@ canvas {
         @media screen and (min-width: 768px) {}
         @media screen and (min-width: 1024px) {
             font-size: 60px;
-        }
-        &--idea {
-            color: rgb(255, 255, 255);
-        }
-        &--design {
-            color: rgb(255, 255, 255);
-        }
-        &--coding {
-            color: rgb(255, 255, 255);
         }
     }
     &__txt {

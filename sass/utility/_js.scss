@@ -2,10 +2,6 @@
     transform: rotate(45deg);
 }
 
-.hide-middle {
-    opacity: 0;
-}
-
 .rotate-bottom {
     transform: rotate(-45deg);
 }
@@ -57,12 +53,12 @@
 
 
 .spinner {
-    width:150px;
-    height: 1.2px;
+    width:2px;
+    height: 1000px;
     margin: 100px auto;
     background-color: rgb(255, 255, 255);
-    // border-radius: 100%;  
-    animation: sk-scaleout 1.0s infinite ease-in-out;
+    border-radius: 100%;  
+    animation: sk-scaleout 1s infinite ease-in-out;
   }
   
   @-webkit-keyframes sk-scaleout {
