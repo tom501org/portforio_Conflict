@@ -17,23 +17,32 @@
     <link rel="stylesheet" href="https://use.typekit.net/rmq1suw.css">
 
 </head>
-<span class="bg__bg0"></span>
-<span class="bg__bg1"></span>
-<span class="bg__bg2"></span>
-<span class="bg__bg3 verypeli"></span>
 
 
 <body>
-    <div class="loading js-loading">
-        <p class="spinner"></p>
-    </div>
 
+
+    
+    
     <div class="wrapper">
+        <div class="loading js-loading">
+            <p class="loading__anime">
+                <!-- <span>LOADING.</span> -->
+            </span>　
+        </div>
+    
+        <div id="cursor"></div>
+        <div id="stalker"></div>
+        
+        <span class="bg__bg0"></span>
+        <span class="bg__bg1"></span>
+        <span class="bg__bg2"></span>
+        <span class="bg__bg3 verypeli"></span>
 
         <!-- ここからヘッダー -->
         <header class="header">
             <div class="header__wrap">
-                <h1 class="header__ttl">PORT<br>FOLIO</h1>
+                <h1 class="header__ttl"></h1>
 
 
                 <div class="btn" id="btn">
@@ -44,32 +53,32 @@
 
                 <nav class="gnav" id="gnav">
                     <ul class="gnav__nav">
-                        <li class="gnav__list"><a href="#sec1" class="gnav__link">about</a></li>
-                        <li class="gnav__list"><a href="#sec2" class="gnav__link">work</a></li>
-                        <li class="gnav__list"><a href="#sec3" class="gnav__link">skill</a></li>
-                        <li class="gnav__list"><a href="#sec4" class="gnav__link">info</a></li>
+                        <li class="gnav__list"><a href="#about" class="gnav__link">about</a></li>
+                        <li class="gnav__list"><a href="#skill" class="gnav__link">skill</a></li>
+                        <li class="gnav__list"><a href="#work" class="gnav__link">work</a></li>                 
+                        <li class="gnav__list"><a href="#contact" class="gnav__link">INFO</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <section class="mv" id="mv">
-            <div class="mv__ttl">
-                <p class="mv__ttl--catch">KOUICHI<br>TOMIYAMA</p>
-                <p class="mv__ttl--txt">DESGIN ART CULTURE</p>
-                <p class="mv__ttl--txt2">×ENGINEERING</p>
-            </div>
-        </section>
-
-
+        
+        
         <main class="main">
+            <div class="mv" id="mv">
+                <div class="mv__ttl">
+                    <p class="mv__ttl--catch">KOUICHI<br>TOMIYAMA</p>
+                    <p class="mv__ttl--txt">DESGIN ART CULTURE</p>
+                    <p class="mv__ttl--txt2">×ENGINEERING</p>
+                </div>
+            </div>
             <canvas class="loop">
                 <script src="./js/perlin.js"></script>
             </canvas>
 
 
-            <section class="conseppt">
-                <h1 class="consept__ttl">CONSEPT</h1>
+            <section class="conseppt" id="consept">
+                <h2 class="consept__ttl">CONSEPT</h2>
                 <div class="consept__box">
                     <p class="consept__txt fadeIn">
                         私の好きな言葉 "夢"を <br> コンセプトにデザインを作成しました。
@@ -78,7 +87,7 @@
                         <br>表現の方法は無限であると定義し
                         <br> 夢の中で起こる無意識な映像の変化
                         <br>時折見る不安な映像の描写<br> 夢を抱き行動する際に起こる心の変化を
-                        <br>背景に施したグラデーションと<br>実写真との差異で生じた色相の変化を元に<br>"夢" を表現しました。
+                        <br>背景に施したグラデーションと<br>実写真との差異で生じた色相の変化を元に<br>"夢" をデザインしました。
                         <br>
                     </p>
                 </div>
@@ -87,20 +96,29 @@
 
 
 
-            <section class="about">
+            <section class="about" id="about">
                 <h2 class="about__ttl">ABOUT</h2>
                 <div class="about__img"></div>
                 <div class="about__container">
                     <div class="about__box">
                         <p class="about__name">冨山 洸一(トミヤマコウイチ)</p>
                         <p class="about__txt fadeIn">
-                            私はほかもしその詐欺がかりという事の時でしでしな。当然には起るたなだです。私はほかもしその詐欺がかりという事の時でしでしな。むしろ今が断食人も何だかその挨拶たでしょほどに救うてしまいたがも相違申しだなて、当然には起るたなだです。
+                        
+1992年生まれ 社会人キャリアを古物店で培う。<br>
+20代の人生を実りあるものへ変える為、単身タイランドへ<br>
+その後、フィリピンへ短期留学、他アジア諸国を歩く。<br>
+旅人のコミュニティをアジアで学び、ゲストハウスで働く。<br>
+世界中の旅人に日本の魅力を伝えることに喜びを感じる。<br>
+ゲストハウス併設のシェアオフィスにて多様なクリエイターと関わり制作への魅力が増し始める。<br>
+2021年３月にコロナウィルスによりゲストハウスが閉鎖時代の流れを直に感じ、職業訓練校への入学を決意<br>
+デザイン、言語の勉強を繰り返す中時間を忘れ没頭していたことに気づき次のキャリアを決める。<br>
                         </p>
                     </div>
                 </div>
             </section>
 
-            <section class="skill">
+
+            <section class="skill" id="skill">
                 <h1 class="skill__ttl">SKILL</h1>
                 <div class="skill__img"></div>
                 <div class="skill__box">
@@ -127,7 +145,7 @@
                 </div>
             </section>
 
-            <section class="work">
+            <section class="work" id="work">
                 <div class="work__ttl">WORK</div>
                 <div class="work__img"></div>
                 <div class="work__container--one fadeIn">
@@ -156,33 +174,35 @@
 
 
 
-            <section class="contact">
-                <h2 class="contact__ttl">CONTACT</h2>
+            <section class="contact" id="contact">
+                <h2 class="contact__ttl">INFO</h2>
 
                 <form
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfodBs97cJ0wDlqG7j1WkfR3bVWiDWDLyWLdudx3aaOBlvDgg/formResponse"
                     id="form" class="form" method="post" target="hidden_iframe" onsubmit="submitted=true;">
 
                     <div class="form__name">
-                        <label for="name" class="form__label">NAME</label>
-                        <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="タナカ　タロウ"
+                        <!-- <label for="name" class="form__label">NAME</label> -->
+                        <input id="name" type="text" name="entry.212036592" class="form__input" placeholder="NAME"
                             required>
                     </div>
 
                     <div class="form__email">
-                        <label for="email" class="form__label">MAIL</label>
+                        <!-- <label for="email" class="form__label">MAIL</label> -->
                         <input id="email" type="email" name="entry.1158593220" class="form__input"
-                            placeholder="exampl@gmail.com" required>
+                            placeholder="MAIL" required>
                     </div>
+                    
 
+                    
                     <div class="form__message">
-                        <label for="message" class="form__label">MESSAGE</label>
+                        <!-- <label for="message" class="form__label">MESSAGE</label> -->
                         <textarea class="form__textarea" name="entry.1280718811" id="message"
-                            placeholder="お問い合わせ内容を入力してください" required></textarea>
+                            placeholder="MESSAGE" required></textarea>
                     </div>
 
                     <div class="form__btn">
-                        <input type="submit" class="form__submit" value="送信">
+                        <input type="submit" class="form__submit" value="SEND">
                     </div>
                 </form>
             </section>

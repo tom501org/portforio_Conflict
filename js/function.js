@@ -7,6 +7,15 @@ $(function () {
 });
 
 $(function () {
+ 
+        // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
+        $('.loading__anime').fadeOut(1000, function(){
+            $('.js-loading').fadeOut(400)
+        });
+});
+
+
+// オブザーバー
 window.addEventListener('load', function () {
     const observer = new IntersectionObserver(function (entries) {
         for (let i = 0; i < entries.length; i++) {
@@ -26,24 +35,13 @@ window.addEventListener('load', function () {
         observer.unobserve(e);
     }
 }, false);
-});
 
-$(function () {
-    //読み込みが完了したら実行
-    $(window).on('load', function () {
-        // ローディングが10秒以内で終わる場合、読み込み完了後ローディング非表示
-        endLoading();
-    });
-    //10秒経過した段階で、上記の処理を上書き、強制終了
-    setTimeout('endLoading()', 10000);
-    //ローディング非表示処理
-    function endLoading() {
-        // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
-        $('.js-loading p').fadeOut(2000, function () {
-            $('.js-loading').fadeOut(500);
-        });
-    }
-});
+
+
+
+
+
+
 
 
 $(function () {
@@ -102,3 +100,35 @@ $(function () {
     }
 });
 
+
+
+
+$(function(){
+  
+    //カーソル要素の指定
+    var cursor=$("#cursor");
+    //ちょっと遅れてついてくるストーカー要素の指定  
+    var stalker=$("#stalker");
+    
+    //mousemoveイベントでカーソル要素を移動させる
+    $(document).on("mousemove",function(e){
+      //カーソルの座標位置を取得
+      var x=e.clientX;
+      var y=e.clientY;
+      //カーソル要素のcssを書き換える用
+      cursor.css({
+        "opacity":"1",
+        "top":y+"px",
+        "left":x+"px"
+      });
+      //ストーカー要素のcssを書き換える用    
+      setTimeout(function(){
+        stalker.css({
+          "opacity":"1",
+          "top":y+"px",
+          "left":x+"px"
+        });
+      },-5);//カーソルより遅れる時間を指定
+      
+    });
+  });
