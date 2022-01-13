@@ -1,14 +1,12 @@
 body {
-    overflow-x: hidden;
     cursor: crosshair;
     @include font__meno;
     width: 100%;
 }
 
-.wrapper {
-    overflow-y: scroll;
-    width: calc(100% + 17px);
-}
+
+
+
 
 .mv {
     @include font__meno;

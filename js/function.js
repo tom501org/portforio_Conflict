@@ -9,7 +9,7 @@ $(function () {
 $(function () {
  
         // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
-        $('.loading__anime').fadeOut(1000, function(){
+        $('.loading__anime').fadeOut(1500, function(){
             $('.js-loading').fadeOut(400)
         });
 });
@@ -68,7 +68,7 @@ $(function () {
         context.lineWidth = 1;
         const amplitude = stageH / 2; // 振幅（縦幅)の大きさ
         const lineNum = 150; // ラインの数
-        const segmentNum = 150; // 分割数
+        const segmentNum = 50; // 分割数
         [...Array(lineNum).keys()].forEach(j => {
             const coefficient = 50 + j;
             context.beginPath();
@@ -79,7 +79,7 @@ $(function () {
             [...Array(segmentNum).keys()].forEach(i => {
                 const x = i / (segmentNum - 1) * stageW;
                 const px = i / coefficient;
-                const py = (j / 50 + time);
+                const py = (j / 500 + time);
                 const y = amplitude * noise.perlin2(px, py) + stageH / 2;
                 if (i === 0) {
                     context.moveTo(x, y);
@@ -132,3 +132,13 @@ $(function(){
       
     });
   });
+
+
+
+
+
+
+
+
+
+
