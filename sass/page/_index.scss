@@ -1,11 +1,9 @@
 body {
-    cursor: crosshair;
+    cursor: none;
     @include font__meno;
     width: 100%;
+    overflow-x: hidden;
 }
-
-
-
 
 
 .mv {

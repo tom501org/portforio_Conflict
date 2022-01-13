@@ -7,11 +7,11 @@ $(function () {
 });
 
 $(function () {
- 
-        // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
-        $('.loading__anime').fadeOut(2000, function(){
-            $('.js-loading').fadeOut(400)
-        });
+
+    // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
+    $('.loading__anime').fadeOut(1500, function () {
+        $('.js-loading').fadeOut(400)
+    });
 });
 
 
@@ -58,7 +58,7 @@ $(function () {
     /** エンターフレームのタイミングです。 */
     function tick() {
         requestAnimationFrame(tick);
-        const time = Date.now() / 4000;
+        const time = Date.now() / 10000;
         draw(time);
     }
     /** 描画します。 */
@@ -67,8 +67,8 @@ $(function () {
         context.clearRect(0, 0, stageW, stageH);
         context.lineWidth = 1;
         const amplitude = stageH / 2; // 振幅（縦幅)の大きさ
-        const lineNum = 150; // ラインの数
-        const segmentNum = 50; // 分割数
+        const lineNum = 50; // ラインの数
+        const segmentNum = 100; // 分割数
         [...Array(lineNum).keys()].forEach(j => {
             const coefficient = 50 + j;
             context.beginPath();
@@ -79,7 +79,7 @@ $(function () {
             [...Array(segmentNum).keys()].forEach(i => {
                 const x = i / (segmentNum - 1) * stageW;
                 const px = i / coefficient;
-                const py = (j / 500 + time);
+                const py = (j / 100 + time);
                 const y = amplitude * noise.perlin2(px, py) + stageH / 2;
                 if (i === 0) {
                     context.moveTo(x, y);
@@ -103,42 +103,62 @@ $(function () {
 
 
 
-$(function(){
-  
-    //カーソル要素の指定
-    var cursor=$("#cursor");
-    //ちょっと遅れてついてくるストーカー要素の指定  
-    var stalker=$("#stalker");
-    
-    //mousemoveイベントでカーソル要素を移動させる
-    $(document).on("mousemove",function(e){
-      //カーソルの座標位置を取得
-      var x=e.clientX;
-      var y=e.clientY;
-      //カーソル要素のcssを書き換える用
-      cursor.css({
-        "opacity":"1",
-        "top":y+"px",
-        "left":x+"px"
-      });
-      //ストーカー要素のcssを書き換える用    
-      setTimeout(function(){
-        stalker.css({
-          "opacity":"1",
-          "top":y+"px",
-          "left":x+"px"
-        });
-      },-5);//カーソルより遅れる時間を指定
-      
+
+
+
+$(function () {
+    const mouseStalker = () => {
+        const o = $("#c-mouseStalker_cursor"),
+            e = $("#c-mouseStalker_delay"),
+            r = {
+                cursor: {
+                    width: o.outerWidth(),
+                    coorX: 0,
+                    coorY: 0,
+                    delay: .001
+                },
+                delay: {
+                    width: e.outerWidth(),
+                    coorX: 0,
+                    coorY: 0,
+                    delay: 10
+                }
+            };
+        TweenMax.to({}, r.cursor.delay, {
+                repeat: -1,
+                onRepeat: function () {
+                    r.delay.coorX += (r.cursor.coorX - r.delay.coorX) / r.delay.delay,
+                        r.delay.coorY += (r.cursor.coorY - r.delay.coorY) / r.delay.delay,
+                        TweenMax.set(e, {
+                            css: {
+                                left: r.delay.coorX - r.delay.width / 2,
+                                top: r.delay.coorY - r.delay.width / 2
+                            }
+                        }),
+                        TweenMax.set(o, {
+                            css: {
+                                left: r.cursor.coorX - r.cursor.width / 2,
+                                top: r.cursor.coorY - r.cursor.width / 2
+                            }
+                        })
+                }
+            }),
+            $(document).on("mousemove", (function (o) {
+                r.cursor.coorX = o.clientX,
+                    r.cursor.coorY = o.clientY
+            }));
+        $("#address,#btn").on({
+            mouseenter: function () {
+                o.addClass("active"),
+                    e.addClass("active")
+            },
+            mouseleave: function () {
+                o.removeClass("active"),
+                    e.removeClass("active")
+            }
+        })
+    };
+    window.addEventListener("load", () => {
+        mouseStalker()
     });
-  });
-
-
-
-
-
-
-
-
-
-
+});

@@ -26,13 +26,9 @@
     
     <div class="wrapper">
         <div class="loading js-loading">
-            <p class="loading__anime">
-                <span>LOADING...</span>              
-            </div>
-    
-        <div id="cursor"></div>
-        <div id="stalker"></div>
-
+        </div>
+        <p class="loading__anime">
+            </p>             
         
         <span class="bg__bg0"></span>
         <span class="bg__bg1"></span>
@@ -45,9 +41,9 @@
                 <h1 class="header__ttl"></h1>
 
 
-                <div class="btn" id="btn">
-                    <span class="btn__top" id="btn__top"></span>
-                    <span class="btn__bottom" id="btn__bottom"></span>
+                <div class="btn" id="btn" >
+                    <span class="btn__top" id="btn__top" id="btn"></span>
+                    <span class="btn__bottom" id="btn__bottom" id="btn"></span>
                 </div>
 
 
@@ -104,14 +100,20 @@
                         <p class="about__name">冨山 洸一(トミヤマコウイチ)</p>
                         <p class="about__txt fadeIn">
                         
-1992年生まれ 社会人キャリアを古物店で培う。<br>
+1992年生まれ 札幌出身<br>
+ 社会人キャリアを古物店で培う。<br>
 20代の人生を実りあるものへ変える為、単身タイランドへ<br>
 その後、フィリピンへ短期留学、他アジア諸国を歩く。<br>
 旅人のコミュニティをアジアで学び、ゲストハウスで働く。<br>
 世界中の旅人に日本の魅力を伝えることに喜びを感じる。<br>
-ゲストハウス併設のシェアオフィスにて多様なクリエイターと関わり制作への魅力が増し始める。<br>
-2021年３月にコロナウィルスによりゲストハウスが閉鎖時代の流れを直に感じ、職業訓練校への入学を決意<br>
-デザイン、言語の勉強を繰り返す中時間を忘れ没頭していたことに気づき次のキャリアを決める。<br>
+ゲストハウス併設のシェアオフィスにて<br>
+多様なクリエイターと関わり制作への魅力が増し始める。<br>
+2021年３月にコロナウィルスにより<br>
+ゲストハウスが閉鎖時代の流れを直に感じ<br>
+職業訓練校への入学を決意<br>
+デザイン、言語の勉強を繰り返す中<br>
+時間を忘れ没頭していたことに気づき<br>
+次のキャリアを決める。<br>
                         </p>
                     </div>
                 </div>
@@ -148,7 +150,7 @@
             <section class="work" id="work">
                 <div class="work__ttl">WORK</div>
                 <div class="work__img"></div>
-                <div class="work__container--one fadeIn">
+                <div class="work__container--one fadeIn"  id="address">
                     <div class="work__box">
                         <img class="work__pic" src="./images/work (1).jpg" alt="ポートフォリオ">
                     </div>
@@ -159,7 +161,7 @@
                         <img class="work__pic" src="./images/work (3).jpg" alt="ポートフォリオ">
                     </div>
                 </div>
-                <div class="work__container--two fadeIn">
+                <div class="work__container--two fadeIn"  id="address">
                     <div class="work__box">
                         <img class="work__pic" src="./images/work (4).jpg" alt="ポートフォリオ">
                     </div>
@@ -212,6 +214,10 @@
         <footer class="footer">
             <p class="footer__txt"><small>koichi tomiyama &copy; All Rights Reserved.</small></p>
         </footer>
+        <div class="c-mouseStalker">
+            <div class="c-mouseStalker_cursor" id="c-mouseStalker_cursor"></div>
+            <div class="c-mouseStalker_delay" id="c-mouseStalker_delay"></div>
+        </div>
     </div>
 
 
@@ -226,7 +232,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>
-    <script src="js/waving.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer></script>
 
 
 </body>
