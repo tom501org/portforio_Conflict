@@ -56,7 +56,7 @@
     position: fixed;
     transform: rotate(-50deg);
     will-change: transform;
-    // animation: rotate-anime 70s linear infinite;
+    animation: rotate-anime 70s linear infinite;
     visibility: visible;
     background: url(./../images/mv.jpg) center/cover;
     content: '';

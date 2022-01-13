@@ -39,16 +39,16 @@
 
 
 
-.loading {
+.loading{
   width: 100%;
   height: 100vh;
-  background-color: hsl(214, 64%, 29%);
-  mix-blend-mode: overlay;
+  background-color: rgb(27, 41, 41);
+  mix-blend-mode:multiply;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 99;
+  z-index: 1005;
   top: 0;
   left: 0;
 }
@@ -56,24 +56,19 @@
 
 
 
-.loading__anime {
+.loading__anime{
   width: 100px;
   height: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -50px;
   box-sizing: border-box;
   border-radius: 50%;
-  border-top: 5px solid hsl(0, 38%, 30%);
+  border-top: 4px solid hsl(0, 38%, 30%);
   // mix-blend-mode: difference;
-  position: fixed;
-  z-index: 100;
+  position: relative;
   animation: a1 7s linear infinite;
-
 }
 
-.loading__anime::before,
-.loading__anime::after {
+.loading__anime::before,.loading__anime::after{
   content: '';
   width: 100px;
   height: 100px;
@@ -84,24 +79,35 @@
   border-radius: 50%;
 }
 
-.loading__anime::before {
+.loading__anime::before{
   border-top: 5px solid hsl(115, 38%, 30%);
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   transform: rotate(120deg);
 }
 
-.loading__anime::after {
+.loading__anime::after{
   border-top: 5px solid hsl(250, 38%, 30%);
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   transform: rotate(240deg);
 }
 
+.loading__anime span{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+   color: rgb(214, 214, 214);
+  //  mix-blend-mode:difference;
+   isolation: isolate;
+  font-size: 20px;
+  line-height: 250px;
+  animation: a2 7s linear;
+}
 
 
 
 @keyframes a1 {
-  to {
-    transform: rotate(360deg) translate(-50%, -50%);
+  to{
+    transform: rotate(360deg);
   }
 }
 
@@ -111,34 +117,7 @@
 
 
 
-// #cursor {
-//     position: fixed;
-//     // background: #fff;
-//     // border-radius:20px;
-//     // width: 10px;
-//     // height: 10px;
-//     margin: 0 auto;
-//     z-index: 5;
-//     pointer-events: none;
-//     opacity: 0;
-// }
 
-// #stalker {
-//   @media screen and (min-width: 768px) {}
-
-//   @media screen and (min-width: 1024px) {}
-//     position: fixed;
-//     width: 150px;
-//     height: 150px;
-//     border-radius: 200px;
-//     margin: -50px 0 0 -50px;
-//     z-index: 1;
-//     pointer-events: none;
-//     background: #ffffff;
-//     mix-blend-mode: difference;
-
-//   }
-// }
 
 
 
@@ -171,7 +150,7 @@
   @media screen and (min-width: 768px) {}
 
   @media screen and (min-width: 1024px) {
-
+    mix-blend-mode: difference;
     width: 2.5rem;
     height: 2.5rem;
     background-color: #858585;
@@ -187,6 +166,5 @@
   @media screen and (min-width: 1024px) {
     transform: scale(5);
     background-color: rgba(221, 221, 221, 0.802);
-    mix-blend-mode: difference;
   }
 }

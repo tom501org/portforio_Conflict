@@ -106,7 +106,6 @@ $(function () {
 
 
 
-$(function () {
     const mouseStalker = () => {
         const o = $("#c-mouseStalker_cursor"),
             e = $("#c-mouseStalker_delay"),
@@ -161,4 +160,3 @@ $(function () {
     window.addEventListener("load", () => {
         mouseStalker()
     });
-});
