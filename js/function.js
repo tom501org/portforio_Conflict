@@ -9,8 +9,8 @@ $(function() {
 $(function() {
 
     // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
-    $('.loading__anime').fadeOut(4000, function() {
-        $('.js-loading').fadeOut(600)
+    $('.loading__anime').fadeOut(3500, function() {
+        $('.js-loading').fadeOut(500)
     });
 });
 
