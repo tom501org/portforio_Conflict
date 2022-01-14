@@ -62,38 +62,44 @@
         height: 40px;
         border: none;
         vertical-align: top;
-        @include  font__meno;
-        color:#828282;
+        @include font__meno;
+        color: #828282;
         font-style: bold;
     }
     &__message {
         max-width: 500px;
         width: 100%;
-        @include  font__meno;
+        @include font__meno;
     }
     &__textarea {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         width: 100%;
         height: 130px;
         padding: 10px;
-        @include  font__meno;
-        color:#ffffff;
+        @include font__meno;
+        color: #ffffff;
         font-style: bold;
-        
     }
     &__submit {
-        @include  font__meno;
+        @include font__meno;
         height: 40px;
         -webkit-appearance: none;
         opacity: 0.8;
         width: 100%;
-        padding: 0 130px 0 130px;
+        padding: 0 220px 0 220px;
+        border: none;
         background: rgb(29, 29, 29);
         color: azure;
         bottom: none;
         font-size: 14px;
         letter-spacing: 0.2em;
         margin-bottom: 100px;
+        @media screen and (min-width: 768px) {
+            width: 100%;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+        }
         &:hover {
             cursor: pointer;
             background: rgb(186, 186, 186);
