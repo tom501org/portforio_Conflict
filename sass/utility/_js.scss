@@ -1,170 +1,148 @@
 .rotate-top {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .rotate-bottom {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .gnav {
-  transition: .3s;
-  opacity: 1;
-  transition: opacity .6s ease, visibility .6s ease;
+    transition: .3s;
+    opacity: 1;
+    transition: opacity .6s ease, visibility .6s ease;
 }
 
 .gnav.open {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .fadeIn {
-  opacity: 0;
+    opacity: 0;
 }
 
 .e-f {
-  animation: fadeIn 3s ease forwards;
+    animation: fadeIn 3s ease forwards;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    //   transform: translateY(0px);
-  }
-
-  100% {
-    opacity: 1;
-    //   transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        //   transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        //   transform: translateY(0);
+    }
 }
 
-
-
-.loading{
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(27, 41, 41);
-  mix-blend-mode:multiply;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 1005;
-  top: 0;
-  left: 0;
+.loading {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(27, 41, 41);
+    mix-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1005;
+    top: 0;
+    left: 0;
 }
 
-
-
-
-.loading__anime{
-  width: 100px;
-  height: 100px;
-  top: -50px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border-top: 4px solid hsl(0, 38%, 30%);
-  // mix-blend-mode: difference;
-  position: relative;
-  animation: a1 7s linear infinite;
+.loading__anime {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 4px solid hsl(0, 38%, 30%);
+    // mix-blend-mode: difference;
+    position: relative;
+    animation: a1 7s linear infinite;
 }
 
-.loading__anime::before,.loading__anime::after{
-  content: '';
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 0;
-  top: -5px;
-  box-sizing: border-box;
-  border-radius: 50%;
+.loading__anime::before,
+.loading__anime::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    box-sizing: border-box;
+    border-radius: 50%;
 }
 
-.loading__anime::before{
-  border-top: 5px solid hsl(115, 38%, 30%);
-  mix-blend-mode: difference;
-  transform: rotate(120deg);
+.loading__anime::before {
+    border-top: 5px solid hsl(115, 38%, 30%);
+    mix-blend-mode: difference;
+    transform: rotate(120deg);
 }
 
-.loading__anime::after{
-  border-top: 5px solid hsl(250, 38%, 30%);
-  mix-blend-mode: difference;
-  transform: rotate(240deg);
+.loading__anime::after {
+    border-top: 5px solid hsl(250, 38%, 30%);
+    mix-blend-mode: difference;
+    transform: rotate(240deg);
 }
 
-.loading__anime span{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-   color: rgb(214, 214, 214);
-  //  mix-blend-mode:difference;
-   isolation: isolate;
-  font-size: 20px;
-  line-height: 250px;
-  animation: a2 7s linear;
+.loading__anime span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    color: rgb(214, 214, 214);
+    //  mix-blend-mode:difference;
+    isolation: isolate;
+    font-size: 20px;
+    line-height: 250px;
+    animation: a2 7s linear;
 }
-
-
 
 @keyframes a1 {
-  to{
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
-
-
-
-
-
-
-
-
-
-
 
 .c-mouseStalker_cursor,
 .c-mouseStalker_delay {
-  @media screen and (min-width: 768px) {}
-
-  @media screen and (min-width: 1024px) {
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none
-  }
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none
+    }
 }
 
 .c-mouseStalker_cursor {
-  @media screen and (min-width: 768px) {}
-
-  @media screen and (min-width: 1024px) {
-
-    width: .5rem;
-    height: .5rem;
-    background-color: rgba(255, 255, 255, 0.542);
-    z-index: 1001;
-  }
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        width: .5rem;
+        height: .5rem;
+        background-color: rgba(255, 255, 255, 0.542);
+        z-index: 1001;
+    }
 }
 
 .c-mouseStalker_delay {
-  @media screen and (min-width: 768px) {}
-
-  @media screen and (min-width: 1024px) {
-    mix-blend-mode: difference;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #858585;
-    ;
-    z-index: 1000;
-    transition: transform ease .3s;
-  }
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        mix-blend-mode: difference;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #858585;
+        ;
+        z-index: 1000;
+        transition: transform ease .3s;
+    }
 }
 
 .c-mouseStalker_delay.active {
-  @media screen and (min-width: 768px) {}
-
-  @media screen and (min-width: 1024px) {
-    transform: scale(5);
-    background-color: rgba(221, 221, 221, 0.802);
-  }
+    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 1024px) {
+        transform: scale(2);
+        background-color: rgba(221, 221, 221, 0.802);
+    }
 }

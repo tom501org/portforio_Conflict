@@ -9,7 +9,7 @@
 .bg__bg0 {
     z-index: -10;
     @include position__base;
-    height:(7880px);
+    height: (8300px);
     position: absolute;
     background: #6D4739;
     @media screen and (min-width: 768px) {
@@ -23,7 +23,7 @@
 .bg__bg2 {
     z-index: -8;
     @include position__base;
-    height:(7880px);
+    height: (8300px);
     position: absolute;
     mix-blend-mode: difference;
     background-image: url(./../images/smf__grad.png);
@@ -40,7 +40,7 @@
     @include position__base;
     position: absolute;
     z-index: -1;
-    height:(7880px);
+    height: (8300px);
     mix-blend-mode: darken;
     background-color: #696AA9;
     @media screen and (min-width: 768px) {
@@ -75,10 +75,6 @@
     }
 }
 
-
-
-
-
 main::before {
     position: fixed;
     will-change: transform, translate;
@@ -98,7 +94,6 @@ main::before {
         opacity: 0.6;
     }
 }
-
 
 @keyframes rotate-anime {
     0% {
@@ -142,4 +137,3 @@ main::before {
         transform: translate(-10%, 10%);
     }
 }
-
