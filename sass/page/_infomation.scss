@@ -86,7 +86,7 @@
         -webkit-appearance: none;
         opacity: 0.8;
         width: 100%;
-        padding: 0 220px 0 220px;
+        padding: 0 130px 0 130px;
         border: none;
         background: rgb(29, 29, 29);
         color: azure;
@@ -99,6 +99,7 @@
         }
         @media screen and (min-width: 1024px) {
             width: 100%;
+            padding: 0 220px 0 220px;
         }
         &:hover {
             cursor: pointer;
