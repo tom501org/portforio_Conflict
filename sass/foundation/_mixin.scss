@@ -7,6 +7,13 @@
     transform: translateY($translate);
 }
 
+@mixin btn__m($translate:0) {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+}
+
 @mixin font__base {
     font-family: din-2014, sans-serif;
     font-weight: 700;
