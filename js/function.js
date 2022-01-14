@@ -1,23 +1,23 @@
-$(function () {
-    $('#btn').on('click', function () {
+$(function() {
+    $('#btn').on('click', function() {
         $('#btn__top').toggleClass('rotate-top')
         $('#btn__bottom').toggleClass('rotate-bottom')
         $('#gnav').slideToggle();
     })
 });
 
-$(function () {
+$(function() {
 
     // 1秒かけてロゴを非表示にし、その後0.8秒かけて背景を非表示にする
-    $('.loading__anime').fadeOut(1500, function () {
-        $('.js-loading').fadeOut(400)
+    $('.loading__anime').fadeOut(3500, function() {
+        $('.js-loading').fadeOut(500)
     });
 });
 
 
 // オブザーバー
-window.addEventListener('load', function () {
-    const observer = new IntersectionObserver(function (entries) {
+window.addEventListener('load', function() {
+    const observer = new IntersectionObserver(function(entries) {
         for (let i = 0; i < entries.length; i++) {
             if (entries[i].intersectionRatio <= 0) continue;
             showElm(entries[i].target);
@@ -44,7 +44,7 @@ window.addEventListener('load', function () {
 
 
 
-$(function () {
+$(function() {
     let stageW = 0; // 画面の幅
     let stageH = 0; // 画面の高さ
     // canvas要素の参照を取得
@@ -106,57 +106,57 @@ $(function () {
 
 
 
-    const mouseStalker = () => {
-        const o = $("#c-mouseStalker_cursor"),
-            e = $("#c-mouseStalker_delay"),
-            r = {
-                cursor: {
-                    width: o.outerWidth(),
-                    coorX: 0,
-                    coorY: 0,
-                    delay: .001
-                },
-                delay: {
-                    width: e.outerWidth(),
-                    coorX: 0,
-                    coorY: 0,
-                    delay: 10
-                }
-            };
-        TweenMax.to({}, r.cursor.delay, {
-                repeat: -1,
-                onRepeat: function () {
-                    r.delay.coorX += (r.cursor.coorX - r.delay.coorX) / r.delay.delay,
-                        r.delay.coorY += (r.cursor.coorY - r.delay.coorY) / r.delay.delay,
-                        TweenMax.set(e, {
-                            css: {
-                                left: r.delay.coorX - r.delay.width / 2,
-                                top: r.delay.coorY - r.delay.width / 2
-                            }
-                        }),
-                        TweenMax.set(o, {
-                            css: {
-                                left: r.cursor.coorX - r.cursor.width / 2,
-                                top: r.cursor.coorY - r.cursor.width / 2
-                            }
-                        })
-                }
-            }),
-            $(document).on("mousemove", (function (o) {
-                r.cursor.coorX = o.clientX,
-                    r.cursor.coorY = o.clientY
-            }));
-        $("#address,#btn").on({
-            mouseenter: function () {
-                o.addClass("active"),
-                    e.addClass("active")
+const mouseStalker = () => {
+    const o = $("#c-mouseStalker_cursor"),
+        e = $("#c-mouseStalker_delay"),
+        r = {
+            cursor: {
+                width: o.outerWidth(),
+                coorX: 0,
+                coorY: 0,
+                delay: .001
             },
-            mouseleave: function () {
-                o.removeClass("active"),
-                    e.removeClass("active")
+            delay: {
+                width: e.outerWidth(),
+                coorX: 0,
+                coorY: 0,
+                delay: 10
             }
-        })
-    };
-    window.addEventListener("load", () => {
-        mouseStalker()
-    });
+        };
+    TweenMax.to({}, r.cursor.delay, {
+            repeat: -1,
+            onRepeat: function() {
+                r.delay.coorX += (r.cursor.coorX - r.delay.coorX) / r.delay.delay,
+                    r.delay.coorY += (r.cursor.coorY - r.delay.coorY) / r.delay.delay,
+                    TweenMax.set(e, {
+                        css: {
+                            left: r.delay.coorX - r.delay.width / 2,
+                            top: r.delay.coorY - r.delay.width / 2
+                        }
+                    }),
+                    TweenMax.set(o, {
+                        css: {
+                            left: r.cursor.coorX - r.cursor.width / 2,
+                            top: r.cursor.coorY - r.cursor.width / 2
+                        }
+                    })
+            }
+        }),
+        $(document).on("mousemove", (function(o) {
+            r.cursor.coorX = o.clientX,
+                r.cursor.coorY = o.clientY
+        }));
+    $("#address,#btn").on({
+        mouseenter: function() {
+            o.addClass("active"),
+                e.addClass("active")
+        },
+        mouseleave: function() {
+            o.removeClass("active"),
+                e.removeClass("active")
+        }
+    })
+};
+window.addEventListener("load", () => {
+    mouseStalker()
+});
